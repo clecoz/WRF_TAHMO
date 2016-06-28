@@ -1,6 +1,6 @@
 &share
  wrf_core = 'ARW',
- max_dom = 3,
+ max_dom = 2,
  start_year = 2003,
  start_month = 01,
  start_day = 01,
