@@ -1,0 +1,84 @@
+<HTML><HEAD><TITLE>24hforecast real</TITLE></HEAD><BODY>
+<H1>24hforecast real</H1><PRE>
+wo jul  6 10:34:02 CEST 2016
+REL_DIR         <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR         <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR         <A HREF="file:/home/camille/DATA/volta/24hforecast/real">/home/camille/DATA/volta/24hforecast/real</a>
+WORK_DIR        <A HREF="file:/home/camille/DATA/volta/24hforecast/real/working">/home/camille/DATA/volta/24hforecast/real/working</a>
+REAL_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+REAL_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+DATE            2006072300
+END_DATE        2006072306
+FCST_RANGE      6
+DOMAINS         {01,02,03}
+<A HREF="namelist.input">Namelist input</a>
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+07/06/16 10:34:09 Ended 0
+wo jul  6 10:34:09 CEST 2016
+</BODY></HTML>
+<HTML><HEAD><TITLE>24hforecast real</TITLE></HEAD><BODY>
+<H1>24hforecast real</H1><PRE>
+wo jul  6 10:44:18 CEST 2016
+REL_DIR         <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR         <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR         <A HREF="file:/home/camille/DATA/volta/24hforecast/real">/home/camille/DATA/volta/24hforecast/real</a>
+WORK_DIR        <A HREF="file:/home/camille/DATA/volta/24hforecast/real/working">/home/camille/DATA/volta/24hforecast/real/working</a>
+REAL_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+REAL_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+DATE            2006072300
+END_DATE        2006072306
+FCST_RANGE      6
+DOMAINS         {01,02,03}
+<A HREF="namelist.input">Namelist input</a>
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+07/06/16 10:44:25 Ended 0
+wo jul  6 10:44:25 CEST 2016
+</BODY></HTML>
+<HTML><HEAD><TITLE>24hforecast real</TITLE></HEAD><BODY>
+<H1>24hforecast real</H1><PRE>
+wo jul  6 10:46:55 CEST 2016
+REL_DIR         <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR         <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR         <A HREF="file:/home/camille/DATA/volta/24hforecast/real">/home/camille/DATA/volta/24hforecast/real</a>
+WORK_DIR        <A HREF="file:/home/camille/DATA/volta/24hforecast/real/working">/home/camille/DATA/volta/24hforecast/real/working</a>
+REAL_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+REAL_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+DATE            2006072300
+END_DATE        2006072306
+FCST_RANGE      6
+DOMAINS         {01,02,03}
+<A HREF="namelist.input">Namelist input</a>
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+07/06/16 10:47:02 Ended 0
+wo jul  6 10:47:02 CEST 2016
+</BODY></HTML>
+<HTML><HEAD><TITLE>24hforecast real</TITLE></HEAD><BODY>
+<H1>24hforecast real</H1><PRE>
+wo jul  6 10:52:00 CEST 2016
+REL_DIR         <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR         <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR         <A HREF="file:/home/camille/DATA/volta/24hforecast/real">/home/camille/DATA/volta/24hforecast/real</a>
+WORK_DIR        <A HREF="file:/home/camille/DATA/volta/24hforecast/real/working">/home/camille/DATA/volta/24hforecast/real/working</a>
+REAL_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+REAL_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/24hforecast/rc">/home/camille/DATA/volta/24hforecast/rc</a>
+DATE            2006072300
+END_DATE        2006072306
+FCST_RANGE      6
+DOMAINS         {01,02,03}
+<A HREF="namelist.input">Namelist input</a>
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+07/06/16 10:52:08 Ended 0
+wo jul  6 10:52:08 CEST 2016
+</BODY></HTML>

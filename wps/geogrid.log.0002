@@ -1,0 +1,182 @@
+2016-07-01 14:14:24.269 ---  *** Starting program geogrid.exe ***
+2016-07-01 14:14:24.270 --- Using the following namelist variables:
+2016-07-01 14:14:24.270 --- &SHARE
+2016-07-01 14:14:24.270 ---   WRF_CORE         = ARW
+2016-07-01 14:14:24.270 ---   MAX_DOM          = 1
+2016-07-01 14:14:24.270 ---   START_YEAR       = 2006
+2016-07-01 14:14:24.270 ---   START_MONTH      = 7
+2016-07-01 14:14:24.270 ---   START_DAY        = 23
+2016-07-01 14:14:24.270 ---   START_HOUR       = 0
+2016-07-01 14:14:24.270 ---   START_MINUTE     = 0
+2016-07-01 14:14:24.270 ---   START_SECOND     = 0
+2016-07-01 14:14:24.270 ---   END_YEAR         = 2006
+2016-07-01 14:14:24.270 ---   END_MONTH        = 7
+2016-07-01 14:14:24.270 ---   END_DAY          = 23
+2016-07-01 14:14:24.270 ---   END_HOUR         = 12
+2016-07-01 14:14:24.270 ---   END_MINUTE       = 0
+2016-07-01 14:14:24.270 ---   END_SECOND       = 0
+2016-07-01 14:14:24.270 ---   START_DATE       = 0000-00-00_00:00:00
+2016-07-01 14:14:24.270 ---   END_DATE         = 0000-00-00_00:00:00
+2016-07-01 14:14:24.270 ---   INTERVAL_SECONDS = 21600
+2016-07-01 14:14:24.270 ---   IO_FORM_GEOGRID  = 2
+2016-07-01 14:14:24.270 ---   OPT_OUTPUT_FROM_GEOGRID_PATH = /home/camille/DATA/volta/expt/rc
+2016-07-01 14:14:24.270 ---   SUBGRID_RATIO_X  = 1
+2016-07-01 14:14:24.270 ---   SUBGRID_RATIO_Y  = 1
+2016-07-01 14:14:24.270 ---   DEBUG_LEVEL      = 0
+2016-07-01 14:14:24.270 ---   ACTIVE_GRID      = .TRUE.
+2016-07-01 14:14:24.271 ---   NOCOLONS         = .FALSE.
+2016-07-01 14:14:24.271 --- /
+2016-07-01 14:14:24.271 --- &GEOGRID
+2016-07-01 14:14:24.271 ---   PARENT_ID         = 1
+2016-07-01 14:14:24.271 ---   PARENT_GRID_RATIO = 1
+2016-07-01 14:14:24.271 ---   I_PARENT_START    = 1
+2016-07-01 14:14:24.271 ---   J_PARENT_START    = 1
+2016-07-01 14:14:24.271 ---   S_WE              = 1
+2016-07-01 14:14:24.271 ---   E_WE              = 163
+2016-07-01 14:14:24.271 ---   S_SN              = 1
+2016-07-01 14:14:24.271 ---   E_SN              = 163
+2016-07-01 14:14:24.271 ---   GEOG_DATA_RES     = 30s
+2016-07-01 14:14:24.271 ---   DX                = 27000.000000
+2016-07-01 14:14:24.271 ---   DY                = 27000.000000
+2016-07-01 14:14:24.271 ---   MAP_PROJ          = lambert
+2016-07-01 14:14:24.271 ---   POLE_LAT          = 90.000000
+2016-07-01 14:14:24.271 ---   POLE_LON          = 0.000000
+2016-07-01 14:14:24.271 ---   REF_LAT           = 16.000000
+2016-07-01 14:14:24.271 ---   REF_LON           = -2.000000
+2016-07-01 14:14:24.271 ---   REF_X             = 100000002004087734272.000000
+2016-07-01 14:14:24.271 ---   REF_Y             = 100000002004087734272.000000
+2016-07-01 14:14:24.271 ---   TRUELAT1          = 16.000000
+2016-07-01 14:14:24.271 ---   TRUELAT2          = -2.000000
+2016-07-01 14:14:24.271 ---   STAND_LON         = -2.000000
+2016-07-01 14:14:24.271 ---   GEOG_DATA_PATH    = /home/camille/Build_WRF/WPS_GEOG
+2016-07-01 14:14:24.271 ---   OPT_GEOGRID_TBL_PATH = /home/camille/Build_WRF/WPS/geogrid
+2016-07-01 14:14:24.272 --- /
+2016-07-01 14:14:24.280 --- Processing domain 1 of 1
+2016-07-01 14:14:24.280 --- INFORM: For HGT_M, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.280 --- INFORM: Using default interpolator sequence for HGT_M.
+2016-07-01 14:14:24.280 --- INFORM: For HGT_M, couldn't find 30s data source.
+2016-07-01 14:14:24.281 --- INFORM: Using default data source for HGT_M.
+2016-07-01 14:14:24.281 --- INFORM: For LANDUSEF, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.281 --- INFORM: Using default interpolator sequence for LANDUSEF.
+2016-07-01 14:14:24.281 --- INFORM: For LANDUSEF, couldn't find 30s data source.
+2016-07-01 14:14:24.281 --- INFORM: Using default data source for LANDUSEF.
+2016-07-01 14:14:24.281 --- INFORM: For SOILTEMP, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.281 --- INFORM: Using default interpolator sequence for SOILTEMP.
+2016-07-01 14:14:24.281 --- INFORM: For SOILTEMP, couldn't find 30s data source.
+2016-07-01 14:14:24.282 --- INFORM: Using default data source for SOILTEMP.
+2016-07-01 14:14:24.282 --- INFORM: Using 30s interpolator sequence for SOILCTOP.
+2016-07-01 14:14:24.282 --- INFORM: Using 30s data source for SOILCTOP.
+2016-07-01 14:14:24.289 --- INFORM: Using 30s interpolator sequence for SOILCBOT.
+2016-07-01 14:14:24.289 --- INFORM: Using 30s data source for SOILCBOT.
+2016-07-01 14:14:24.294 --- INFORM: For ALBEDO12M, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.294 --- INFORM: Using default interpolator sequence for ALBEDO12M.
+2016-07-01 14:14:24.294 --- INFORM: For ALBEDO12M, couldn't find 30s data source.
+2016-07-01 14:14:24.295 --- INFORM: Using default data source for ALBEDO12M.
+2016-07-01 14:14:24.295 --- INFORM: For GREENFRAC, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.295 --- INFORM: Using default interpolator sequence for GREENFRAC.
+2016-07-01 14:14:24.295 --- INFORM: For GREENFRAC, couldn't find 30s data source.
+2016-07-01 14:14:24.295 --- INFORM: Using default data source for GREENFRAC.
+2016-07-01 14:14:24.295 --- INFORM: For LAI12M, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.295 --- INFORM: Using default interpolator sequence for LAI12M.
+2016-07-01 14:14:24.295 --- INFORM: For LAI12M, couldn't find 30s data source.
+2016-07-01 14:14:24.296 --- INFORM: Using default data source for LAI12M.
+2016-07-01 14:14:24.296 --- INFORM: For SNOALB, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.296 --- INFORM: Using default interpolator sequence for SNOALB.
+2016-07-01 14:14:24.296 --- INFORM: For SNOALB, couldn't find 30s data source.
+2016-07-01 14:14:24.296 --- INFORM: Using default data source for SNOALB.
+2016-07-01 14:14:24.296 --- INFORM: For SLOPECAT, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.296 --- INFORM: Using default interpolator sequence for SLOPECAT.
+2016-07-01 14:14:24.296 --- INFORM: For SLOPECAT, couldn't find 30s data source.
+2016-07-01 14:14:24.296 --- INFORM: Using default data source for SLOPECAT.
+2016-07-01 14:14:24.297 --- INFORM: For CON, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.297 --- INFORM: Using default interpolator sequence for CON.
+2016-07-01 14:14:24.297 --- INFORM: For CON, couldn't find 30s data source.
+2016-07-01 14:14:24.297 --- INFORM: Using default data source for CON.
+2016-07-01 14:14:24.297 --- INFORM: For VAR, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.297 --- INFORM: Using default interpolator sequence for VAR.
+2016-07-01 14:14:24.297 --- INFORM: For VAR, couldn't find 30s data source.
+2016-07-01 14:14:24.297 --- INFORM: Using default data source for VAR.
+2016-07-01 14:14:24.298 --- INFORM: For OA1, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.298 --- INFORM: Using default interpolator sequence for OA1.
+2016-07-01 14:14:24.298 --- INFORM: For OA1, couldn't find 30s data source.
+2016-07-01 14:14:24.298 --- INFORM: Using default data source for OA1.
+2016-07-01 14:14:24.298 --- INFORM: For OA2, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.298 --- INFORM: Using default interpolator sequence for OA2.
+2016-07-01 14:14:24.298 --- INFORM: For OA2, couldn't find 30s data source.
+2016-07-01 14:14:24.298 --- INFORM: Using default data source for OA2.
+2016-07-01 14:14:24.299 --- INFORM: For OA3, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.299 --- INFORM: Using default interpolator sequence for OA3.
+2016-07-01 14:14:24.299 --- INFORM: For OA3, couldn't find 30s data source.
+2016-07-01 14:14:24.299 --- INFORM: Using default data source for OA3.
+2016-07-01 14:14:24.299 --- INFORM: For OA4, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.299 --- INFORM: Using default interpolator sequence for OA4.
+2016-07-01 14:14:24.299 --- INFORM: For OA4, couldn't find 30s data source.
+2016-07-01 14:14:24.299 --- INFORM: Using default data source for OA4.
+2016-07-01 14:14:24.299 --- INFORM: For OL1, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.300 --- INFORM: Using default interpolator sequence for OL1.
+2016-07-01 14:14:24.300 --- INFORM: For OL1, couldn't find 30s data source.
+2016-07-01 14:14:24.300 --- INFORM: Using default data source for OL1.
+2016-07-01 14:14:24.300 --- INFORM: For OL2, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.300 --- INFORM: Using default interpolator sequence for OL2.
+2016-07-01 14:14:24.300 --- INFORM: For OL2, couldn't find 30s data source.
+2016-07-01 14:14:24.300 --- INFORM: Using default data source for OL2.
+2016-07-01 14:14:24.300 --- INFORM: For OL3, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.300 --- INFORM: Using default interpolator sequence for OL3.
+2016-07-01 14:14:24.300 --- INFORM: For OL3, couldn't find 30s data source.
+2016-07-01 14:14:24.301 --- INFORM: Using default data source for OL3.
+2016-07-01 14:14:24.301 --- INFORM: For OL4, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.301 --- INFORM: Using default interpolator sequence for OL4.
+2016-07-01 14:14:24.301 --- INFORM: For OL4, couldn't find 30s data source.
+2016-07-01 14:14:24.301 --- INFORM: Using default data source for OL4.
+2016-07-01 14:14:24.301 --- INFORM: Using 30s interpolator sequence for VAR_SSO.
+2016-07-01 14:14:24.301 --- INFORM: Using 30s data source for VAR_SSO.
+2016-07-01 14:14:24.304 --- INFORM: For LAKE_DEPTH, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.304 --- INFORM: Using default interpolator sequence for LAKE_DEPTH.
+2016-07-01 14:14:24.304 --- INFORM: For LAKE_DEPTH, couldn't find 30s data source.
+2016-07-01 14:14:24.304 --- INFORM: Using default data source for LAKE_DEPTH.
+2016-07-01 14:14:24.304 --- INFORM: For URB_PARAM, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.304 --- INFORM: Using default interpolator sequence for URB_PARAM.
+2016-07-01 14:14:24.304 --- INFORM: For URB_PARAM, couldn't find 30s data source.
+2016-07-01 14:14:24.304 --- INFORM: Using default data source for URB_PARAM.
+2016-07-01 14:14:24.305 --- INFORM: For IMPERV, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.305 --- INFORM: Using default interpolator sequence for IMPERV.
+2016-07-01 14:14:24.305 --- INFORM: For IMPERV, couldn't find 30s data source.
+2016-07-01 14:14:24.305 --- INFORM: Using default data source for IMPERV.
+2016-07-01 14:14:24.305 --- INFORM: Could not read 'index' file /home/camille/Build_WRF/WPS_GEOG/nlcd2011_imp_ll_9s/index for field IMPERV
+2016-07-01 14:14:24.305 --- INFORM: This field is optional and will not be processed.
+2016-07-01 14:14:24.305 --- INFORM: For CANFRA, couldn't find interpolator sequence for resolution 30s.
+2016-07-01 14:14:24.305 --- INFORM: Using default interpolator sequence for CANFRA.
+2016-07-01 14:14:24.305 --- INFORM: For CANFRA, couldn't find 30s data source.
+2016-07-01 14:14:24.305 --- INFORM: Using default data source for CANFRA.
+2016-07-01 14:14:24.305 --- INFORM: Could not read 'index' file /home/camille/Build_WRF/WPS_GEOG/nlcd2011_can_ll_9s/index for field CANFRA
+2016-07-01 14:14:24.305 --- INFORM: This field is optional and will not be processed.
+2016-07-01 14:14:24.408 --- Processing field 1 of 26 (LANDUSEF)
+2016-07-01 14:14:26.854 --- Processing field 2 of 26 (LU_INDEX)
+2016-07-01 14:14:26.855 --- Processing field 3 of 26 (HGT_M)
+2016-07-01 14:14:30.803 --- Processing field 4 of 26 (SOILTEMP)
+2016-07-01 14:14:30.808 --- Processing field 5 of 26 (SOILCTOP)
+2016-07-01 14:14:33.307 --- Processing field 6 of 26 (SCT_DOM)
+2016-07-01 14:14:33.308 --- Processing field 7 of 26 (SOILCBOT)
+2016-07-01 14:14:35.817 --- Processing field 8 of 26 (SCB_DOM)
+2016-07-01 14:14:35.818 --- Processing field 9 of 26 (ALBEDO12M)
+2016-07-01 14:14:35.926 --- Processing field 10 of 26 (GREENFRAC)
+2016-07-01 14:14:40.108 --- Processing field 11 of 26 (LAI12M)
+2016-07-01 14:14:40.125 --- Processing field 12 of 26 (SNOALB)
+2016-07-01 14:14:40.128 --- Processing field 13 of 26 (SLOPECAT)
+2016-07-01 14:14:40.141 --- Processing field 14 of 26 (CON)
+2016-07-01 14:14:40.160 --- Processing field 15 of 26 (VAR)
+2016-07-01 14:14:40.180 --- Processing field 16 of 26 (OA1)
+2016-07-01 14:14:40.200 --- Processing field 17 of 26 (OA2)
+2016-07-01 14:14:40.220 --- Processing field 18 of 26 (OA3)
+2016-07-01 14:14:40.242 --- Processing field 19 of 26 (OA4)
+2016-07-01 14:14:40.263 --- Processing field 20 of 26 (OL1)
+2016-07-01 14:14:40.282 --- Processing field 21 of 26 (OL2)
+2016-07-01 14:14:40.301 --- Processing field 22 of 26 (OL3)
+2016-07-01 14:14:40.320 --- Processing field 23 of 26 (OL4)
+2016-07-01 14:14:40.339 --- Processing field 24 of 26 (VAR_SSO)
+2016-07-01 14:14:42.138 --- Processing field 25 of 26 (LAKE_DEPTH)
+2016-07-01 14:14:43.802 --- Processing field 26 of 26 (URB_PARAM)
+2016-07-01 14:14:50.074 --- Optional fields not processed by geogrid:
+2016-07-01 14:14:50.074 ---     IMPERV (priority=1, resolution='default', path='/home/camille/Build_WRF/WPS_GEOG/nlcd2011_imp_ll_9s/')
+2016-07-01 14:14:50.074 ---     CANFRA (priority=1, resolution='default', path='/home/camille/Build_WRF/WPS_GEOG/nlcd2011_can_ll_9s/')
+2016-07-01 14:14:50.563 ---  *** Successful completion of program geogrid.exe ***
