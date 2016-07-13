@@ -28,15 +28,15 @@ export NL_ANALYSIS_DATE=${ANALYSIS_DATE}.0000
 export DA_FIRST_GUESS=${DA_FIRST_GUESS:-${RC_DIR}/$DATE/wrfinput_d01}
 export EP_DIR=${EP_DIR:-$FC_DIR/$DATE/ep}
 
-if $NL_VAR4D; then
-   export DA_BOUNDARIES=${DA_BOUNDARIES:-$RC_DIR/$DATE/wrfbdy_d01}
-   #DALE: Boundaries look wrong to me.
-fi
+#if $NL_VAR4D; then
+#   export DA_BOUNDARIES=${DA_BOUNDARIES:-$RC_DIR/$DATE/wrfbdy_d01}
+#   #DALE: Boundaries look wrong to me.
+#fi
 if $CYCLING; then
    if [[ $CYCLE_NUMBER -gt 0 ]]; then
-      if $NL_VAR4D; then
-         export DA_BOUNDARIES=$FC_DIR/$DATE/wrfbdy_d01    # wrfvar boundaries input.
-      fi
+#      if $NL_VAR4D; then
+#         export DA_BOUNDARIES=$FC_DIR/$DATE/wrfbdy_d01    # wrfvar boundaries input.
+#      fi
 #cys: exclude WPB case in which DA_FIRST_GUESS is specified outside
 #     export DA_FIRST_GUESS=${FC_DIR}/${PREV_DATE}/${FILE_TYPE}_d01_${ANALYSIS_DATE}
       if ! $RUN_WPB; then
@@ -44,10 +44,8 @@ if $CYCLING; then
       fi
    fi
 fi
-if [[ $NL_MULTI_INC == 2 ]]; then
-   export DA_FIRST_GUESS=${RC_DIR}/$DATE/wrfinput_d01
-   export DA_BOUNDARIES=${RC_DIR}/$DATE/wrfbdy_d01
-fi
+
+
 export DA_ANALYSIS=${DA_ANALYSIS:-analysis}
 export DA_BDY_ANALYSIS=${DA_BDY_ANALYSIS:-wrfvar_bdyout}
 export DA_BACK_ERRORS=${DA_BACK_ERRORS:-$BE_DIR/be.dat} # wrfvar background errors.
@@ -68,14 +66,14 @@ export NL_SEED_ARRAY2=${NL_SEED_ARRAY2:-$DATE}
 
 # Change defaults from Registry.wrfvar which is required to be
 # consistent with WRF's Registry.EM
-export NL_INTERP_TYPE=${NL_INTERP_TYPE:-1}
-export NL_T_EXTRAP_TYPE=${NL_T_EXTRAP_TYPE:-1}
-export NL_I_PARENT_START=${NL_I_PARENT_START:-0}
-export NL_J_PARENT_START=${NL_J_PARENT_START:-0}
-export NL_JCDFI_USE=${NL_JCDFI_USE:-false}
-export NL_CO2TF=${NL_CO2TF:-0}
-export NL_W_SPECIFIED=${NL_W_SPECIFIED:-true}
-export NL_REAL_DATA_INIT_TYPE=${NL_REAL_DATA_INIT_TYPE:-3}
+#export NL_INTERP_TYPE=${NL_INTERP_TYPE:-1}
+#export NL_T_EXTRAP_TYPE=${NL_T_EXTRAP_TYPE:-1}
+#export NL_I_PARENT_START=${NL_I_PARENT_START:-0}
+#export NL_J_PARENT_START=${NL_J_PARENT_START:-0}
+#export NL_JCDFI_USE=${NL_JCDFI_USE:-false}
+#export NL_CO2TF=${NL_CO2TF:-0}
+#export NL_W_SPECIFIED=${NL_W_SPECIFIED:-true}	??????????????
+#export NL_REAL_DATA_INIT_TYPE=${NL_REAL_DATA_INIT_TYPE:-3}	??????????????/
 
 #=======================================================
 
@@ -124,14 +122,14 @@ cd $WORK_DIR
 START_DATE=$($BUILD_DIR/da_advance_time.exe $DATE $WINDOW_START)
 END_DATE=$($BUILD_DIR/da_advance_time.exe $DATE $WINDOW_END)
 
-for INDEX in 01 02 03 04 05 06 07; do
-   let H=$INDEX-1+$WINDOW_START
-   D_DATE[$INDEX]=$($BUILD_DIR/da_advance_time.exe $DATE $H)
-   export D_YEAR[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c1-4)
-   export D_MONTH[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c5-6)
-   export D_DAY[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c7-8)
-   export D_HOUR[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c9-10)
-done
+#for INDEX in 01 02 03 04 05 06 07; do
+#   let H=$INDEX-1+$WINDOW_START
+#   D_DATE[$INDEX]=$($BUILD_DIR/da_advance_time.exe $DATE $H)
+#   export D_YEAR[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c1-4)
+#   export D_MONTH[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c5-6)
+#   export D_DAY[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c7-8)
+#   export D_HOUR[$INDEX]=$(echo ${D_DATE[$INDEX]} | cut -c9-10)
+#done
 
 export YEAR=$(echo $DATE | cut -c1-4)
 export MONTH=$(echo $DATE | cut -c5-6)
@@ -161,19 +159,19 @@ export END_HOUR=$(echo $END_DATE | cut -c9-10)
 export NL_TIME_WINDOW_MIN=${NL_TIME_WINDOW_MIN:-${START_YEAR}-${START_MONTH}-${START_DAY}_${START_HOUR}:00:00.0000}
 export NL_TIME_WINDOW_MAX=${NL_TIME_WINDOW_MAX:-${END_YEAR}-${END_MONTH}-${END_DAY}_${END_HOUR}:00:00.0000}
 
-if $NL_VAR4D; then
-
-   export NL_START_YEAR=$(echo $START_DATE | cut -c1-4)
-   export NL_START_MONTH=$(echo $START_DATE | cut -c5-6)
-   export NL_START_DAY=$(echo $START_DATE | cut -c7-8)
-   export NL_START_HOUR=$(echo $START_DATE | cut -c9-10)
-
-   export NL_END_YEAR=$(echo $END_DATE | cut -c1-4)
-   export NL_END_MONTH=$(echo $END_DATE | cut -c5-6)
-   export NL_END_DAY=$(echo $END_DATE | cut -c7-8)
-   export NL_END_HOUR=$(echo $END_DATE | cut -c9-10)
-
-fi
+#if $NL_VAR4D; then
+#
+#   export NL_START_YEAR=$(echo $START_DATE | cut -c1-4)
+#   export NL_START_MONTH=$(echo $START_DATE | cut -c5-6)
+#   export NL_START_DAY=$(echo $START_DATE | cut -c7-8)
+#   export NL_START_HOUR=$(echo $START_DATE | cut -c9-10)
+#
+#   export NL_END_YEAR=$(echo $END_DATE | cut -c1-4)
+#   export NL_END_MONTH=$(echo $END_DATE | cut -c5-6)
+#   export NL_END_DAY=$(echo $END_DATE | cut -c7-8)
+#   export NL_END_HOUR=$(echo $END_DATE | cut -c9-10)
+#
+#fi
 
 #-----------------------------------------------------------------------
 # [2.0] Perform sanity checks:
@@ -218,14 +216,14 @@ ln -fs $WRFVAR_DIR/run/LANDUSE.TBL .
 ln -fs $BUILD_DIR/da_wrfvar.exe .
 export PATH=$WRFVAR_DIR/var/scripts:$PATH
 
-if $NL_VAR4D; then
-   ln -fs $DA_BOUNDARIES wrfbdy_d01
-   ln -fs $DA_FIRST_GUESS fg01
-   ln -fs $WRFVAR_DIR/run/RRTM_DATA_DBL RRTM_DATA
-   ln -fs $WRFVAR_DIR/run/VEGPARM.TBL .
-   ln -fs $WRFVAR_DIR/run/SOILPARM.TBL .
-   ln -fs $WRFVAR_DIR/run/GENPARM.TBL .
-fi
+#if $NL_VAR4D; then
+#   ln -fs $DA_BOUNDARIES wrfbdy_d01
+#   ln -fs $DA_FIRST_GUESS fg01
+#   ln -fs $WRFVAR_DIR/run/RRTM_DATA_DBL RRTM_DATA
+#   ln -fs $WRFVAR_DIR/run/VEGPARM.TBL .
+#   ln -fs $WRFVAR_DIR/run/SOILPARM.TBL .
+#   ln -fs $WRFVAR_DIR/run/GENPARM.TBL .
+#fi
 ln -fs $DA_FIRST_GUESS fg 
 ln -fs $DA_FIRST_GUESS ${FILE_TYPE}_d01
 if [[ $NL_ANALYSIS_TYPE != "VERIFY" ]] ; then
@@ -254,48 +252,48 @@ if [[ -f $DA_VARBC_IN ]]; then
    ln -fs $DA_VARBC_IN "VARBC.in"
 fi
 
-if [[ -f $ADJOINT_SENSITIVITY ]]; then
-   ln -fs $ADJOINT_SENSITIVITY "gr01"
-   export NL_USE_LANCZOS=true
-   export NL_ADJ_SENS=true
-   export NL_ANALYSIS_TYPE=QC-OBS
-   export NL_SENSITIVITY_OPTION=0
-   export NL_AUXINPUT17_INNAME="./gr01"
-   export NL_IO_FORM_AUXINPUT17=2
-   export NL_IOFIELDS_FILENAME="${WRFVAR_DIR}/var/run/fso.io_config"
-   if [[ -f $SUITE_DIR/$DATE/wrfvar/lanczos_eigenpairs* ]]; then
-      cp $SUITE_DIR/$DATE/wrfvar/lanczos_eigenpairs* $RUN_DIR
-      export NL_READ_LANCZOS=true
-   fi
-fi
+#if [[ -f $ADJOINT_SENSITIVITY ]]; then
+#   ln -fs $ADJOINT_SENSITIVITY "gr01"
+#   export NL_USE_LANCZOS=true
+#   export NL_ADJ_SENS=true
+#   export NL_ANALYSIS_TYPE=QC-OBS
+#   export NL_SENSITIVITY_OPTION=0
+#   export NL_AUXINPUT17_INNAME="./gr01"
+#   export NL_IO_FORM_AUXINPUT17=2
+#   export NL_IOFIELDS_FILENAME="${WRFVAR_DIR}/var/run/fso.io_config"
+#   if [[ -f $SUITE_DIR/$DATE/wrfvar/lanczos_eigenpairs* ]]; then
+#      cp $SUITE_DIR/$DATE/wrfvar/lanczos_eigenpairs* $RUN_DIR
+#      export NL_READ_LANCZOS=true
+#   fi
+#fi
 
 export RADIANCE_INFO_DIR=${RADIANCE_INFO_DIR:-$WRFVAR_DIR/var/run/radiance_info}
 ln -fs $RADIANCE_INFO_DIR radiance_info
 
 if [[ $NL_NUM_FGAT_TIME -gt 1 ]]; then
-   if $NL_VAR4D; then
-      # More than one observation file of each type
-      ln -fs $OB_DIR/${D_DATE[01]}/ob.ascii+ ob01.ascii
-      for I in 02 03 04 05 06; do
-         ln -fs $OB_DIR/${D_DATE[$I]}/ob.ascii ob${I}.ascii
-      done
-      ln -fs $OB_DIR/${D_DATE[07]}/ob.ascii- ob07.ascii
+#   if $NL_VAR4D; then
+#      # More than one observation file of each type
+#      ln -fs $OB_DIR/${D_DATE[01]}/ob.ascii+ ob01.ascii
+#      for I in 02 03 04 05 06; do
+#         ln -fs $OB_DIR/${D_DATE[$I]}/ob.ascii ob${I}.ascii
+#      done
+#      ln -fs $OB_DIR/${D_DATE[07]}/ob.ascii- ob07.ascii
 
-      if [[ -s $OB_DIR/${D_DATE[01]}/ob.ssmi+ ]]; then
-         ln -fs $OB_DIR/${D_DATE[01]}/ob.ssmi+ ob01.ssmi
-         for I in 02 03 04 05 06; do
-            ln -fs $OB_DIR/${D_DATE[$I]}/ob.ssmi ob${I}.ssmi
-         done
-         ln -fs $OB_DIR/${D_DATE[07]}/ob.ssmi- ob07.ssmi
-      fi
+#      if [[ -s $OB_DIR/${D_DATE[01]}/ob.ssmi+ ]]; then
+#         ln -fs $OB_DIR/${D_DATE[01]}/ob.ssmi+ ob01.ssmi
+#         for I in 02 03 04 05 06; do
+#            ln -fs $OB_DIR/${D_DATE[$I]}/ob.ssmi ob${I}.ssmi
+#         done
+#         ln -fs $OB_DIR/${D_DATE[07]}/ob.ssmi- ob07.ssmi
+#      fi
 
-      if [[ -s $OB_DIR/${D_DATE[01]}/ob.radar+ ]]; then
-         ln -fs $OB_DIR/${D_DATE[01]}/ob.radar+ ob01.radar
-         for I in 02 03 04 05 06; do
-            ln -fs $OB_DIR/${D_DATE[$I]}/ob.radar ob${I}.radar
-         done
-         ln -fs $OB_DIR/${D_DATE[07]}/ob.radar- ob07.radar
-      fi
+#      if [[ -s $OB_DIR/${D_DATE[01]}/ob.radar+ ]]; then
+#         ln -fs $OB_DIR/${D_DATE[01]}/ob.radar+ ob01.radar
+#         for I in 02 03 04 05 06; do
+#            ln -fs $OB_DIR/${D_DATE[$I]}/ob.radar ob${I}.radar
+#         done
+#         ln -fs $OB_DIR/${D_DATE[07]}/ob.radar- ob07.radar
+#      fi
    else
       typeset -i N
       let N=0
@@ -335,13 +333,13 @@ done
 
 . $WRFVAR_DIR/inc/namelist_script.inc 
 
-if $NL_VAR4D; then
-   cp namelist.input $RUN_DIR/namelist_wrfvar.input
-   echo '<A HREF="namelist_wrfvar.input">WRFVAR namelist.input</a>'
-else
+#if $NL_VAR4D; then
+#   cp namelist.input $RUN_DIR/namelist_wrfvar.input
+#   echo '<A HREF="namelist_wrfvar.input">WRFVAR namelist.input</a>'
+#else
    cp namelist.input $RUN_DIR
    echo '<A HREF="namelist.input">Namelist.input</a>'
-fi
+#fi
 
 #-------------------------------------------------------------------
 #Prepare the multi-incremnet files:
@@ -358,29 +356,29 @@ if $DUMMY; then
    echo "Dummy wrfvar" > $DA_ANALYSIS
    RC=0
 else
-   if $NL_VAR4D; then
-      if [[ $NUM_PROCS -gt 1 ]]; then
-         # JRB kludge until we work out what we are doing here
-         if [[ $SUBMIT == "LSF" ]]; then
-         mpirun.lsf ./da_wrfvar.exe
-         RC=$?
+#   if $NL_VAR4D; then
+#      if [[ $NUM_PROCS -gt 1 ]]; then
+#         # JRB kludge until we work out what we are doing here
+#         if [[ $SUBMIT == "LSF" ]]; then
+#         mpirun.lsf ./da_wrfvar.exe
+#         RC=$?
 
-         fi
+#         fi
 
-         if [[ $SUBMIT == "none" ]]; then
-            $RUN_CMD ./da_wrfvar.exe
-         fi
+#         if [[ $SUBMIT == "none" ]]; then
+#            $RUN_CMD ./da_wrfvar.exe
+#         fi
 
-      else
-         $RUN_CMD ./da_wrfvar.exe
-         RC=$?
-      fi
-   else
+#      else
+#         $RUN_CMD ./da_wrfvar.exe
+#         RC=$?
+#      fi
+#   else
       # 3DVAR
       $RUN_CMD ./da_wrfvar.exe
       RC=$?
-   fi
-
+#   fi
+exit 2
 # temporarily store the high resolution reults in RUN_DIR
    
 
@@ -548,13 +546,13 @@ EOF
       fi
    fi
 
-   if $NL_VAR4D; then
-      cp $WORK_DIR/namelist_wrfvar.output $RUN_DIR/namelist_wrfvar.output
-      echo '<A HREF="namelist_wrfvar.output">WRFVAR namelist.output</a>'
-   else
+#   if $NL_VAR4D; then
+#      cp $WORK_DIR/namelist_wrfvar.output $RUN_DIR/namelist_wrfvar.output
+#      echo '<A HREF="namelist_wrfvar.output">WRFVAR namelist.output</a>'
+#   else
       cp $WORK_DIR/namelist.output $RUN_DIR
       echo '<A HREF="namelist.output">Namelist.output</a>'
-   fi
+#   fi
 
    if [[ -f rsl.out.0000 ]]; then
       rm -rf $RUN_DIR/rsl

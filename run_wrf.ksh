@@ -120,7 +120,8 @@ for DOMAIN in $DOMAINS; do
    # WHY
    # cp ${RC_DIR}/$DATE/wrflowinp_d${DOMAIN} wrflowinp_d${DOMAIN}
    if [[ $USE_SST = 1 ]]; then
-      cp $WRF_INPUT_DIR/$DATE/wrflowinp_d${DOMAIN} wrflowinp_d${DOMAIN}
+#      cp $WRF_INPUT_DIR/$DATE/wrflowinp_d${DOMAIN} wrflowinp_d${DOMAIN}
+      cp ${RC_DIR}/$INITIAL_DATE/wrflowinp_d${DOMAIN} wrflowinp_d${DOMAIN}
    fi
 done
 cp $WRF_INPUT_DIR/$DATE/wrfbdy_d01* .
@@ -191,6 +192,7 @@ echo '<A HREF="namelist.input">Namelist input</a>'
 if [[ $WRF_CONF == "" ]]; then
    mv $WORK_DIR/wrfinput_* $FC_DIR_DATE
    mv $WORK_DIR/wrfout_*   $FC_DIR_DATE
+   mv $WORK_DIR/wrfvar_input_* $FC_DIR_DATE
 fi
 
 if $CLEAN; then

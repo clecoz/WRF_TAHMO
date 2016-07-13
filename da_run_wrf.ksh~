@@ -198,17 +198,13 @@ cp $WRF_INPUT_DIR/wrfbdy_d01* .
 
 let NL_INTERVAL_SECONDS=$LBC_FREQ*3600
 
-echo $EXEC_DIR
-echo [ -f $EXEC_DIR/inc/namelist_script.inc ]
 if [[ $WRF_NAMELIST'.' != '.' ]]; then
-echo 1111111111111111111
    ln -fs $WRF_NAMELIST namelist.input
 elif [[ -f $EXEC_DIR/inc/namelist_script.inc ]]; then
-echo 2222222222222222222222
-echo $EXEC_DIR
    . $EXEC_DIR/inc/namelist_script.inc "namelist.input"
-#else
-#   ln -fs $EXEC_DIR/test/em_real/namelist.input .
+else
+   echo "Problem with namelist.input"
+   exit 1
 fi
 
 cp namelist.input $RUN_DIR/namelist.input

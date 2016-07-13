@@ -261,6 +261,7 @@ fi
 if [[ $WRF_CONF == "" ]]; then
    mv $WORK_DIR/wrfinput_* $FC_DIR_DATE
    mv $WORK_DIR/wrfout_*   $FC_DIR_DATE
+   mv $WORK_DIR/wrfvar_input_* $FC_DIR_DATE
 fi
 
 if $CLEAN; then

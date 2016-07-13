@@ -48,9 +48,9 @@ export		SUBMIT=none
 #-------------------------------------------------------------------------
 #Time info
 export DATE=2006072300
-export INITIAL_DATE=2006072400
+export INITIAL_DATE=2006072300
 #export   FINAL_DATE=2006072400	#$INITIAL_DATE
-export	FCST_RANGE=24
+export	FCST_RANGE=6
 export	LBC_FREQ=6	#default value
 
 
@@ -60,7 +60,7 @@ export	LBC_FREQ=6	#default value
 #---------------------------RUNNING WPS----------------------------------------------
 
 
-export NL_MAX_DOM=2
+export NL_MAX_DOM=3
 export DOMAINS={01,02,03} 
 export NL_E_WE=163,184,184
 export NL_E_SN=163,217,280
@@ -88,14 +88,16 @@ export GEOG_DATA_RES=default
 
 export RUN_DIR=$RUN_DIR_g/wps
 rm -rf $RUN_DIR
-
+date
+echo "wps start"
 ./da_run_wps.ksh
 RC=$?
 if [[ $RC != 0 ]]; then
       echo "ERROR in run_wps.ksh"
       exit 1
 fi
-
+date
+echo "wps ended"
 #-------------------------RUNNING real------------------------------------------------
 #export WRF_DIR=/home/camille/Build_WRF/WRFV3
 
@@ -152,13 +154,16 @@ fi
 
 export RUN_DIR=$RUN_DIR_g/real
 rm -rf $RUN_DIR
-
+date
+echo "real start"
 ./da_run_real.ksh 
 RC=$?
 if [[ $RC != 0 ]]; then
       echo "ERROR in run_real.ksh : namelist.input or real.exe failed..."
       exit 1
 fi
+date
+echo "real ended"
 
 #--------------------------RUNNING WRF------------------------------------
 
@@ -191,7 +196,8 @@ export NL_INPUT_OUTNAME="wrfvar_input_d<domain>_<date>"
 
 export RUN_DIR=$RUN_DIR_g/wrf
 rm -rf $RUN_DIR
-
+date
+echo "wrf start"
 #./run_wrf.ksh
 ./da_run_wrf.ksh
 RC=$?
@@ -199,4 +205,6 @@ if [[ $RC != 0 ]]; then
       echo "ERROR in run_real.ksh : namelist or wrf.exe failed..."
       exit 1
 fi
+date
+echo "wrf ended"
 #-------------------------------------------------------------------------

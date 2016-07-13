@@ -1,0 +1,155 @@
++ set echo
++ REGION=volta
++ export REGION
++ EXPT=cycling
++ export EXPT
++ DAT_DIR=/home/camille/DATA
++ export DAT_DIR
++ REG_DIR=/home/camille/DATA/volta
++ export REG_DIR
++ EXP_DIR=/home/camille/DATA/volta/cycling
++ export EXP_DIR
++ WPS_DIR=/home/camille/Build_WRF/WPS
++ export WPS_DIR
++ REL_DIR=/home/camille/Build_WRF
++ export REL_DIR
++ WRFVAR_DIR=/home/camille/Build_WRF/WRFDA
++ export WRFVAR_DIR
++ RUN_DIR_g=/home/camille/DATA/volta/cycling
++ export RUN_DIR_g
++ SCRIPTS_DIR=/home/camille/WRF_TAHMO
++ export SCRIPTS_DIR
++ NUM_PROCS=4
++ export NUM_PROCS
++ SUBMIT=none
++ export SUBMIT
++ INITIAL_DATE=2016062000
++ export INITIAL_DATE
++ RUN_DURATION=24
++ export RUN_DURATION
++ /home/camille/Build_WRF/WRFDA/var/da/da_advance_time.exe 2016062000 24 -w
++ FINAL_DATE=2016-06-21_00:00:00
++ export FINAL_DATE
++ CYCLE_PERIOD=6
++ export CYCLE_PERIOD
++ LBC_FREQ=6
++ export LBC_FREQ
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ DOMAINS=01
++ export DOMAINS
++ NL_E_WE=163,184,184
++ export NL_E_WE
++ NL_E_SN=63,217,280
++ export NL_E_SN
++ NL_E_VERT=51,51,51
++ export NL_E_VERT
++ [[ 1 > 1 ]]
++ MAP_PROJ=lambert
++ export MAP_PROJ
++ REF_LAT=16.0
++ export REF_LAT
++ REF_LON=-2.0
++ export REF_LON
++ TRUELAT1=16.0
++ export TRUELAT1
++ TRUELAT2=-2.0
++ export TRUELAT2
++ STAND_LON=-2.0
++ export STAND_LON
++ GEOG_DATA_RES=default
++ export GEOG_DATA_RES
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_FRAMES_PER_OUTFILE=3,3,3
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=60,60,60
++ export NL_HISTORY_INTERVAL
++ NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ export NL_INPUT_FROM_FILE
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_DX=27000,9000,3000
++ export NL_DX
++ NL_DY=27000,9000,3000
++ export NL_DY
++ NL_MP_PHYSICS=4,4,4
++ export NL_MP_PHYSICS
++ NL_RADT=3,3,3
++ export NL_RADT
++ NL_SF_SFCLAY_PHYSICS=1,1,1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2,2,2
++ export NL_SF_SURFACE_PHYSICS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_BL_PBL_PHYSICS=1,1,1
++ export NL_BL_PBL_PHYSICS
++ NL_BLDT=0,0,0
++ export NL_BLDT
++ NL_CU_PHYSICS=1,1,0
++ export NL_CU_PHYSICS
++ NL_CUDT=5,5,0
++ export NL_CUDT
++ NL_RA_LW_PHYSICS=1,1,1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1,1,1
++ export NL_RA_SW_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_KM_OPT=4,4,4
++ export NL_KM_OPT
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ [[ 1 > 1 ]]
++ USE_SST=0
++ export USE_SST
++ [[ 0 == 1 ]]
++ USE_ADAPTIVE_TIME_STEP=0
++ export USE_ADAPTIVE_TIME_STEP
++ [[ 0 == 1 ]]
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_INPUT_OUTNAME='wrfvar_input_d<domain>_<date>'
++ export NL_INPUT_OUTNAME
++ OB_DIR=/home/camille/DATA/ob
++ export OB_DIR
++ DA_DIR=/home/camille/DATA/volta/cycling/da
++ export DA_DIR
++ WINDOW_START=-1h30m
++ export WINDOW_START
++ WINDOW_END=1h30m
++ export WINDOW_END
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ CYCLING=true
++ export CYCLING
++ CYCLE_NUMBER=0
++ export CYCLE_NUMBER
++ USE_RADIANCE_OBS=0
++ export USE_RADIANCE_OBS
++ [[ 0 == 1 ]]
++ [[ -f /home/camille/DATA/volta/cycling/namelist_wrf.ksh ]]
++ cat
++ ./wrapper_run_wrfvar_Volta_cycling.ksh[223]: /home/camille/DATA/volta/cycling/namelist_wrf.ksh: cannot create [No such file or directory]
++ echo 'export NL_MAX_DOM=1'

@@ -21,16 +21,18 @@ set echo
 #------------------------------------------------------------------------
 
 export REGION=volta
-export EXPT=24hforecast
+export EXPT=data_assimilation
 #Directories:
 export        DAT_DIR=/home/camille/DATA        
-export        REG_DIR=$DAT_DIR/$REGION              
+export        REG_DIR=$DAT_DIR/$REGION    
+export 	      EXP_DIR=$REG_DIR/$EXPT           
 #export        RC_DIR=$REG_DIR/rc
 #export        OB_DIR=$REG_DIR/ob
 export	      WPS_DIR=/home/camille/Build_WRF/WPS
 export 		REL_DIR=/home/camille/Build_WRF
 #export WRF_DIR
 #export WRFDA_DIR
+export WRFVAR_DIR=$REL_DIR/WRFDA
 #export WRF_INPUT_DIR=${WRF_INPUT_DIR:-$RC_DIR}
 
 #export	      RUN_DIR=/home/camille/WRF_TAHMO/wps
@@ -47,10 +49,10 @@ export		SUBMIT=none
 
 #-------------------------------------------------------------------------
 #Time info
-export DATE=2006072300
-export INITIAL_DATE=2006072300
+export DATE=2016062000
+export INITIAL_DATE=2006072400
 #export   FINAL_DATE=2006072400	#$INITIAL_DATE
-export	FCST_RANGE=48
+export	FCST_RANGE=24
 export	LBC_FREQ=6	#default value
 
 
@@ -87,21 +89,19 @@ export GEOG_DATA_RES=default
 
 
 export RUN_DIR=$RUN_DIR_g/wps
-rm -rf $RUN_DIR
-date
-echo "wps start"
-./da_run_wps.ksh
-RC=$?
-if [[ $RC != 0 ]]; then
-      echo "ERROR in run_wps.ksh"
-      exit 1
-fi
-date
-echo "wps ended"
+#rm -rf $RUN_DIR
+
+#./da_run_wps.ksh
+#RC=$?
+#if [[ $RC != 0 ]]; then
+#      echo "ERROR in run_wps.ksh"
+#      exit 1
+#fi
+
 #-------------------------RUNNING real------------------------------------------------
 #export WRF_DIR=/home/camille/Build_WRF/WRFV3
 
-export NL_NUM_METGRID_LEVELS=27
+export NL_NUM_METGRID_LEVELS=32
 export NL_NUM_METGRID_SOIL_LEVELS=4
 export NL_P_TOP_REQUESTED=5000
 export NL_FRAMES_PER_OUTFILE=3,3,3
@@ -153,17 +153,14 @@ fi
 
 
 export RUN_DIR=$RUN_DIR_g/real
-rm -rf $RUN_DIR
-date
-echo "real start"
-./da_run_real.ksh 
-RC=$?
-if [[ $RC != 0 ]]; then
-      echo "ERROR in run_real.ksh : namelist.input or real.exe failed..."
-      exit 1
-fi
-date
-echo "real ended"
+#rm -rf $RUN_DIR
+
+#./da_run_real.ksh 
+#RC=$?
+#if [[ $RC != 0 ]]; then
+#      echo "ERROR in run_real.ksh : namelist.input or real.exe failed..."
+#      exit 1
+#fi
 
 #--------------------------RUNNING WRF------------------------------------
 
@@ -195,16 +192,75 @@ export NL_IO_FORM_BOUNDARY=2	#2=NetCDF 4=PHD5 5=GRIB1 10=GRIB2 11=pnetCDF
 export NL_INPUT_OUTNAME="wrfvar_input_d<domain>_<date>"
 
 export RUN_DIR=$RUN_DIR_g/wrf
-rm -rf $RUN_DIR
-date
-echo "wrf start"
+#rm -rf $RUN_DIR
+
 #./run_wrf.ksh
-./da_run_wrf.ksh
-RC=$?
-if [[ $RC != 0 ]]; then
-      echo "ERROR in run_real.ksh : namelist or wrf.exe failed..."
-      exit 1
+#./da_run_wrf.ksh
+#RC=$?
+#if [[ $RC != 0 ]]; then
+#      echo "ERROR in run_real.ksh : namelist or wrf.exe failed..."
+#      exit 1
+#fi
+
+#------------------RUNNING WRFDA (3DVAR)----------------------------------
+export OB_DIR=$DAT_DIR/ob
+export DA_DIR=$EXP_DIR/da
+
+export WINDOW_START=-1h30m
+export WINDOW_END=1h30m	#1.5
+
+export NL_CV_OPTIONS=3
+export NL_OB_FORMAT=1
+
+export CYCLING=true
+export CYCLE_NUMBER=0
+#export DA_FIRST_GUESS=${RC_DIR}/$DATE/wrfinput_d01 ???????????/
+
+export USE_RADIANCE_OBS=0
+if [[ $USE_RADIANCE_OBS = 1 ]]; then
+#export RTTOV=
+#export CRTM=
+export NL_RTM_OPTION=2	#1=RTTOV 2=CRTM
+export DA_CRTM_COEFFS=$WRFVAR_DIR/var/run/crtm_coeffs
+export NL_USE_VARBC=.true.
+export DA_VARBC_IN=$WRFVAR_DIR/var/run/VARBC.in
+export NL_USE_AMSUAOBS=.true.
+#export NL_USE_AMSUBOBS=.true.
+export NL_RTMINIT_NSENSOR=1
+export NL_RTMINIT_PLATFORM=1,1,1,1,1,1
+export NL_RTMINIT_SATID=15,16,18,15,16,17
+export NL_RTMINIT_SENSOR=3,3,3,4,4,4
+export NL_THINNING=.true.
+export NL_THINNING_MESH=120.0,120.0,120.0,120.0,120.0,120.0
+export NL_QC_RAD=.true.
 fi
-date
-echo "wrf ended"
+
+#export NL_SEED_ARRAY1=
+#export NL_SEED_ARRAY2=
+
+export MAX_DOM=$NL_MAX_DOM
+export NL_MAX_DOM=1
+export RUN_DIR=$RUN_DIR_g/wrfvar
+
+for dom in $DOMAINS; do
+export DOMAIN=$dom
+
+
+#env | grep ".*NL_.*" | grep -v "NAME"> namelist_doms.txt
+#for VAR in `echo ${!NL_*}`; do
+for VAR in `env | grep ".*NL_.*" | grep -v "NAME"`; do
+#echo ${$VAR}
+#set ${VAR}_temp=0
+echo "export" $VAR | cat >> namelist_original.ksh
+set $VAR=0
+done
+set A=0
+#echo $NL_DX_temp
+exit 1
+
+
+./run_wrfvar2.ksh
+echo $?
+done
+export NL_MAX_DOM=$MAX_DOM
 #-------------------------------------------------------------------------

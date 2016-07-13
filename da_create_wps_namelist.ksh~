@@ -38,10 +38,10 @@ cat >namelist.wps <<EOF
 /
 
 &geogrid
- parent_id =           $PARENT_ID,
- parent_grid_ratio =   $PARENT_GRID_RATIO,
- i_parent_start =      $I_PARENT_START,
- j_parent_start =      $J_PARENT_START,
+ parent_id =           $NL_PARENT_ID,
+ parent_grid_ratio =   $NL_PARENT_GRID_RATIO,
+ i_parent_start =      $NL_I_PARENT_START,
+ j_parent_start =      $NL_J_PARENT_START,
  s_we           = 1,1,1,
  e_we           = $NL_E_WE,
  s_sn           = 1,1,1,
