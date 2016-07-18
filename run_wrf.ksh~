@@ -188,7 +188,7 @@ echo '<A HREF="namelist.input">Namelist input</a>'
 
    echo $(date +'%D %T') "Ended $RC"
 #fi
-ls -ls *
+
 if [[ $WRF_CONF == "" ]]; then
    mv $WORK_DIR/wrfinput_* $FC_DIR_DATE
    mv $WORK_DIR/wrfout_*   $FC_DIR_DATE

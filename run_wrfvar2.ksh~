@@ -288,7 +288,12 @@ fi
 # Radiance
 if [[ $USE_RADIANCE_OBS = 1 ]]; then
 #echo $OB_DIR/${DATE}/radiance/gdas.1bamua.t00z.${YEAR}${MONTH}${DAY}.bufr
-ln -fs $OB_DIR/${DATE}/radiance/gdas.1bamua.t00z.${YEAR}${MONTH}${DAY}.bufr ./amsua.bufr
+if [[ $NL_USE_AMSUAOBS ]]; then
+ln -fs $OB_DIR/${DATE}/radiance/gdas.1bamua.t${HOUR}z.${YEAR}${MONTH}${DAY}.bufr ./amsua.bufr
+fi
+if [[ $NL_USE_AIRSOBS ]]; then
+ln -fs $OB_DIR/${DATE}/radiance/gdas.airsev.t${HOUR}z.${YEAR}${MONTH}${DAY}.bufr ./airs.bufr 
+fi
 #ln -fs $OB_DIR/${DATE}/radiance/gdas1.t00z.1bamub.tm00.bufr ./amsub.bufr
 fi
 . $WRFVAR_DIR/inc/namelist_script.inc 
@@ -312,7 +317,6 @@ else
       # 3DVAR
       $RUN_CMD ./da_wrfvar.exe
       RC=$?
-echo $RC
 #   fi
 
 

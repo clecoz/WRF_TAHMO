@@ -21,7 +21,7 @@ set echo
 #------------------------------------------------------------------------
 
 export REGION=volta
-export EXPT=data_assimilation
+export EXPT=radiance
 #Directories:
 export        DAT_DIR=/home/camille/DATA        
 export        REG_DIR=$DAT_DIR/$REGION    
@@ -191,7 +191,7 @@ export CYCLING=true
 export CYCLE_NUMBER=0
 #export DA_FIRST_GUESS=${RC_DIR}/$DATE/wrfinput_d01 ???????????/
 
-export USE_RADIANCE_OBS=0
+export USE_RADIANCE_OBS=1
 if [[ $USE_RADIANCE_OBS = 1 ]]; then
 #export RTTOV=
 #export CRTM=
@@ -201,13 +201,14 @@ export NL_USE_VARBC=.true.
 export DA_VARBC_IN=$WRFVAR_DIR/var/run/VARBC.in
 export NL_USE_AMSUAOBS=.true.
 #export NL_USE_AMSUBOBS=.true.
-export NL_RTMINIT_NSENSOR=1
-export NL_RTMINIT_PLATFORM=1,1,1,1,1,1
-export NL_RTMINIT_SATID=15,16,18,15,16,17
-export NL_RTMINIT_SENSOR=3,3,3,4,4,4
+export NL_RTMINIT_NSENSOR=2
+export NL_RTMINIT_PLATFORM=10,9 #9,10,1,1,1,1
+export NL_RTMINIT_SATID=2,2 #,2,15,16,18,19
+export NL_RTMINIT_SENSOR=3,11 #,3,3,3,3,3
 export NL_THINNING=.true.
-export NL_THINNING_MESH=120.0,120.0,120.0,120.0,120.0,120.0
+export NL_THINNING_MESH=120.0 #,120.0,120.0,120.0,120.0,120.0
 export NL_QC_RAD=.true.
+export NL_CRTM_IRLAND_COEF='IGBP.IRland.EmisCoeff.bin'
 fi
 
 #export NL_SEED_ARRAY1=
@@ -224,7 +225,7 @@ echo 1
    rm ${RUN_DIR_g}/namelist_*.ksh
 fi
 
-if [[ $NL_MAX_DOM > 1 ]]; then
+#if [[ $NL_MAX_DOM > 1 ]]; then
 echo "export NL_MAX_DOM="$NL_MAX_DOM | cat >> ${RUN_DIR_g}/namelist_wrf.ksh
 dom=1
 while [[ $dom -le $NL_MAX_DOM ]] ; do
@@ -243,7 +244,7 @@ for VAR in `env | grep ".*NL_.*" | grep -v "NAME" | grep -v "NL_MAX_DOM"`; do
    let dom=dom+1
    done
 done
-fi
+#fi
 
 #. ${RUN_DIR_g}/namelist_wrf.ksh
 #echo $NL_DX
@@ -254,26 +255,27 @@ fi
 #-------------------------------------------------------------------------
 
 # Run WPS
-#export RUN_DIR=$RUN_DIR_g/wps
-#rm -rf $RUN_DIR
+export RUN_DIR=$RUN_DIR_g/wps
+rm -rf $RUN_DIR
 
 #if [[ $NL_MAX_DOM > 1 ]]; then
 #. ${RUN_DIR_g}/namelist_d01.ksh
 #fi
-
+export NL_DX=`echo $NL_DX | cut -d "," -f1`
+export NL_DY=`echo $NL_DY | cut -d "," -f1`
 #./da_run_wps.ksh
 #RC=$?
 #if [[ $RC != 0 ]]; then
-#      echo "ERROR in run_wps.ksh"
+#     echo "ERROR in run_wps.ksh"
 #      exit 1
 #fi
 
 # Run real
-#export RUN_DIR=$RUN_DIR_g/real
-#rm -rf $RUN_DIR
+export RUN_DIR=$RUN_DIR_g/real
+rm -rf $RUN_DIR
 
 #if [[ $NL_MAX_DOM > 1 ]]; then
-#. ${RUN_DIR_g}/namelist_wrf.ksh
+. ${RUN_DIR_g}/namelist_wrf.ksh
 #fi
 
 #echo NL_PARENT_ID
@@ -298,6 +300,7 @@ export RUN_DIR=$RUN_DIR_g/wrf
 
 
 #--------------------------------------------
+#export NL_USE_AIRSOBS=.true.
 
 #export MAX_DOM=$NL_MAX_DOM
 #export NL_MAX_DOM=1

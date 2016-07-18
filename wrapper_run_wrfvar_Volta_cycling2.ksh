@@ -17,7 +17,7 @@ set echo
 #------------------------------------------------------------------------
 
 export REGION=volta
-export EXPT=cycling2_sst	# Name of the experiment, used to named the folder where the results will be saved
+export EXPT=radiance_cycle2	# Name of the experiment, used to named the folder where the results will be saved
 
 #Directories:
 export        DAT_DIR=/home/camille/DATA        
@@ -136,9 +136,9 @@ export NL_IO_FORM_BOUNDARY=2	#2=NetCDF 4=PHD5 5=GRIB1 10=GRIB2 11=pnetCDF
 
 # Writting input-formatted data as output for WRFDA application, you should not need to change these parameters
 export NL_WRITE_INPUT=.true.
-#export NL_INPUTOUT_INTERVAL=
-export NL_INPUTOUT_BEGIN_H=$CYCLE_PERIOD
-export NL_INPUTOUT_END_H=$CYCLE_PERIOD
+export NL_INPUTOUT_INTERVAL=360,360,360
+export NL_INPUTOUT_BEGIN_H=$CYCLE_PERIOD,$CYCLE_PERIOD,$CYCLE_PERIOD
+export NL_INPUTOUT_END_H=$CYCLE_PERIOD,$CYCLE_PERIOD,$CYCLE_PERIOD
 export NL_INPUT_OUTNAME="wrfvar_input_d<domain>_<date>"
 
 
@@ -147,7 +147,7 @@ export WINDOW_START=-1h30m
 export WINDOW_END=1h30m	#1.5
 export NL_CV_OPTIONS=3
 export NL_OB_FORMAT=1		# 1=bufr, 2=ascii
-export USE_RADIANCE_OBS=0	# Use radiance observations: 0=No, 1=Yes
+export USE_RADIANCE_OBS=1	# Use radiance observations: 0=No, 1=Yes
 if [[ $USE_RADIANCE_OBS = 1 ]]; then	# Parameters used for radiance observations
 #export RTTOV=
 #export CRTM=
@@ -157,13 +157,15 @@ export NL_USE_VARBC=.true.
 export DA_VARBC_IN=$WRFVAR_DIR/var/run/VARBC.in
 export NL_USE_AMSUAOBS=.true.
 #export NL_USE_AMSUBOBS=.true.
+#export NL_USE_AIRSOBS=.true.
 export NL_RTMINIT_NSENSOR=1
-export NL_RTMINIT_PLATFORM=1,1,1,1,1,1
-export NL_RTMINIT_SATID=15,16,18,15,16,17
-export NL_RTMINIT_SENSOR=3,3,3,4,4,4
+export NL_RTMINIT_PLATFORM=10,9 #1,1,1,1,1,1
+export NL_RTMINIT_SATID=2,2 #15,16,18,15,16,17
+export NL_RTMINIT_SENSOR=3,11 #3,3,3,4,4,4
 export NL_THINNING=.true.
 export NL_THINNING_MESH=120.0,120.0,120.0,120.0,120.0,120.0
 export NL_QC_RAD=.true.
+export NL_CRTM_IRLAND_COEF='IGBP.IRland.EmisCoeff.bin'
 fi
 
 
@@ -185,7 +187,7 @@ while [[ $dom -le $NL_MAX_DOM ]] ; do
    echo "export NL_MAX_DOM=1" | cat >> ${EXP_DIR}/namelist_d0${dom}.ksh
    let dom=dom+1
 done
-for VAR in `env | grep ".*NL_.*" | grep -v "NAME" | grep -v "NL_MAX_DOM"`; do
+for VAR in `env | grep ".*NL_.*" | grep -v "NAME" | grep -v "NL_MAX_DOM" | grep -v "NL_RTMINIT.*"`; do
    echo "export" $VAR | cat >> ${EXP_DIR}/namelist_wrf.ksh
    dom=1
    while [[ $dom -le $NL_MAX_DOM ]] ; do
