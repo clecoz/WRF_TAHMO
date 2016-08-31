@@ -138,6 +138,10 @@ let NL_INTERVAL_SECONDS=$LBC_FREQ*3600
 #   ln -fs $EXEC_DIR/test/em_real/namelist.input .
 #fi
 
+if [[ $USE_TSLIST = 1 ]];then
+   ln -fs ${SCRIPTS_DIR}/tslist .
+fi
+
 cp namelist.input $RUN_DIR/namelist.input
 cp namelist.input $RUN_DIR/namelist.input$WRF_CONF
 echo '<A HREF="namelist.input">Namelist input</a>'

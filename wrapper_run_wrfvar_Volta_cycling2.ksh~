@@ -17,7 +17,7 @@ set echo
 #------------------------------------------------------------------------
 
 export REGION=volta
-export EXPT=radiance_cycle	# Name of the experiment, used to named the folder where the results will be saved
+export EXPT=cycle	# Name of the experiment, used to named the folder where the results will be saved
 
 #Directories:
 export        DAT_DIR=/home/camille/DATA        
@@ -147,7 +147,7 @@ export WINDOW_START=-1h30m
 export WINDOW_END=1h30m	#1.5
 export NL_CV_OPTIONS=3
 export NL_OB_FORMAT=1		# 1=bufr, 2=ascii
-export USE_RADIANCE_OBS=1	# Use radiance observations: 0=No, 1=Yes
+export USE_RADIANCE_OBS=0	# Use radiance observations: 0=No, 1=Yes
 if [[ $USE_RADIANCE_OBS = 1 ]]; then	# Parameters used for radiance observations
 #export RTTOV=
 #export CRTM=
@@ -219,7 +219,7 @@ if [[ $RC != 0 ]]; then
       echo "ERROR in run_wps.ksh"
       exit 1
 fi
-
+exit
 # Run real
 export RUN_DIR=$EXP_DIR/real
 rm -rf $RUN_DIR

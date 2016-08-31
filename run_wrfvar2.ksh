@@ -291,6 +291,7 @@ if [[ $USE_RADIANCE_OBS = 1 ]]; then
 if [[ $NL_USE_AMSUAOBS ]]; then
 ln -fs $OB_DIR/${DATE}/radiance/gdas.1bamua.t${HOUR}z.${YEAR}${MONTH}${DAY}.bufr ./amsua.bufr
 fi
+exit
 if [[ $NL_USE_AIRSOBS ]]; then
 ln -fs $OB_DIR/${DATE}/radiance/gdas.airsev.t${HOUR}z.${YEAR}${MONTH}${DAY}.bufr ./airs.bufr 
 fi
@@ -308,7 +309,6 @@ fi
 #Run WRF-Var:
 #-------------------------------------------------------------------
 #mkdir trace
-
 if $DUMMY; then
    echo Dummy wrfvar
    echo "Dummy wrfvar" > $DA_ANALYSIS
@@ -425,6 +425,20 @@ fi
    # rm -f inv_*.*
    # rm -f oma_*.*
    # rm -f filtered_*.*
+if [[ -f 01_oma* ]]; then
+      rm -rf $RUN_DIR/rad
+      mkdir -p $RUN_DIR/rad
+      mv 01_oma* $RUN_DIR/rad
+#      cd $RUN_DIR/rad
+      mv $RUN_DIR/rad $DA_DIR_DATE/d${DOMAIN}/rad
+fi
+if [[ -f 01_inv* ]]; then
+      rm -rf $RUN_DIR/rad
+      mkdir -p $RUN_DIR/rad
+      mv 01_inv** $RUN_DIR/rad
+#      cd $RUN_DIR/rad
+      mv $RUN_DIR/rad $DA_DIR_DATE/d${DOMAIN}/rad
+fi
 
 #   if [[ $NL_MULTI_INC == 0 ]] ; then
       if [[ -f wrfvar_output ]]; then

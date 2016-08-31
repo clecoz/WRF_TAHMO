@@ -11,13 +11,13 @@
 #export WALLCLOCK=5	#?????????????????
 #export QUEUE=premium	#?????????????????
 #export NUM_PROCS=8 
-export		NUM_PROCS=4
+export		NUM_PROCS=6
 export		SUBMIT=none
 set echo
 #------------------------------------------------------------------------
 
 export REGION=volta
-export EXPT=radiance_cycle2	# Name of the experiment, used to named the folder where the results will be saved
+export EXPT=test48d2	# Name of the experiment, used to named the folder where the results will be saved
 
 #Directories:
 export        DAT_DIR=/home/camille/DATA        
@@ -36,11 +36,11 @@ export        SCRIPTS_DIR=/home/camille/WRF_TAHMO	# Directory where are the scri
 
 
 #Time info:
-export INITIAL_DATE=2016062000
-export RUN_DURATION=24
+export INITIAL_DATE=2016080100
+export RUN_DURATION=48
 export FINAL_DATE=$($WRFVAR_DIR/var/da/da_advance_time.exe $INITIAL_DATE $RUN_DURATION) # Should not need to be changed
 export CYCLING=true
-export CYCLE_PERIOD=6
+export CYCLE_PERIOD=48
 export LBC_FREQ=6	# Used to set interval_second in namelist
 
 
@@ -76,7 +76,7 @@ export GEOG_DATA_RES=default
 export NL_NUM_METGRID_LEVELS=32
 export NL_NUM_METGRID_SOIL_LEVELS=4
 export NL_P_TOP_REQUESTED=5000
-export NL_FRAMES_PER_OUTFILE=3,3,3
+export NL_FRAMES_PER_OUTFILE=1,1,1
 export NL_HISTORY_INTERVAL=60,60,60
 export NL_INPUT_FROM_FILE=.true.,.true.,.true.
 export NL_TIME_STEP=120
@@ -113,6 +113,9 @@ if [[ $USE_SST = 1 ]]; then	# Parameters used for time-varying SST
 	export NL_IO_FORM_AUXINPUT4=2
 fi
 
+# tslist
+export NL_MAX_TS_LOCS=15
+export NL_MAX_TS_LEVEL=32
 
 # Adaptive time step
 export USE_ADAPTIVE_TIME_STEP=1		# 0=No, 1=Yes
@@ -147,7 +150,7 @@ export WINDOW_START=-1h30m
 export WINDOW_END=1h30m	#1.5
 export NL_CV_OPTIONS=3
 export NL_OB_FORMAT=1		# 1=bufr, 2=ascii
-export USE_RADIANCE_OBS=1	# Use radiance observations: 0=No, 1=Yes
+export USE_RADIANCE_OBS=0	# Use radiance observations: 0=No, 1=Yes
 if [[ $USE_RADIANCE_OBS = 1 ]]; then	# Parameters used for radiance observations
 #export RTTOV=
 #export CRTM=
@@ -165,6 +168,8 @@ export NL_RTMINIT_SENSOR=3,11 #3,3,3,4,4,4
 export NL_THINNING=.true.
 export NL_THINNING_MESH=120.0,120.0,120.0,120.0,120.0,120.0
 export NL_QC_RAD=.true.
+export NL_WRITE_IV_RAD_ASCII=.true.
+export NL_WRITE_OA_RAD_ASCII=.true.
 export NL_CRTM_IRLAND_COEF='IGBP.IRland.EmisCoeff.bin'
 fi
 

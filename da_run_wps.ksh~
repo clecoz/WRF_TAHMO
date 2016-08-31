@@ -62,8 +62,8 @@ else
    if $RUN_GEOGRID; then
       # Run geogrid:
       ln -fs $WPS_DIR/geogrid.exe .
-#      mkdir ./geogrid
-#      ln -fs $WPS_DIR/geogrid/GEOGRID.TBL ./geogrid/GEOGRID.TBL
+      mkdir ./geogrid
+      ln -fs $WPS_DIR/geogrid/GEOGRID.TBL ./geogrid/GEOGRID.TBL
       ${RUN_CMD} ./geogrid.exe
 #      ./geogrid.exe
       RC=$?
@@ -105,7 +105,7 @@ else
 #   Note that once the specific version of wps is run, it exits 
 #   and does not come back to this script.
 #-----------------------------------------------------------------------
-echo $END_DATE
+
    # Run ungrib:
    ln -fs $VTABLE_DIR/Vtable.${VTABLE_TYPE} Vtable
    LOCAL_DATE=$DATE
@@ -117,8 +117,7 @@ echo $WPS_INPUT_DIR/$LOCAL_DATE
       fi
       LOCAL_DATE=$($BUILD_DIR/da_advance_time.exe ${LOCAL_DATE} ${LBC_FREQ} 3>/dev/null)
    done
-echo 12345
-echo $FILES
+
    $WPS_DIR/link_grib.csh $FILES
 
    ln -fs $WPS_DIR/ungrib.exe .
@@ -153,9 +152,9 @@ echo $FILES
    fi
 
 fi
-
+pwd
 cd $OLDPWD
-
+pwd
 if $CLEAN; then rm -rf $WORK_DIR; fi
 
 date

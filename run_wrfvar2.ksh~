@@ -308,7 +308,8 @@ fi
 #Run WRF-Var:
 #-------------------------------------------------------------------
 #mkdir trace
-
+echo 11111111111111111111111111111
+echo $RUN_CMD 
 if $DUMMY; then
    echo Dummy wrfvar
    echo "Dummy wrfvar" > $DA_ANALYSIS
@@ -318,7 +319,7 @@ else
       $RUN_CMD ./da_wrfvar.exe
       RC=$?
 #   fi
-
+echo 2222222222222222222222222222222
 
 if $CYCLING; then
    if [[ ${DOMAIN} == '01' ]]; then
@@ -465,6 +466,7 @@ mv $WORK_DIR/fg $DA_DIR_DATE/d${DOMAIN}/fg
       mkdir -p $RUN_DIR/rsl
       mv rsl* $RUN_DIR/rsl
       cd $RUN_DIR/rsl
+      mv $RUN_DIR/rsl $DA_DIR_DATE/d${DOMAIN}/rsl
       for FILE in rsl*; do
          echo "<HTML><HEAD><TITLE>$FILE</TITLE></HEAD>" > $FILE.html
          echo "<H1>$FILE</H1><PRE>" >> $FILE.html
