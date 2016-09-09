@@ -1,0 +1,2239 @@
++ NUM_PROCS=6
++ export NUM_PROCS
++ SUBMIT=none
++ export SUBMIT
++ set echo
++ REGION=volta
++ export REGION
++ EXPT=BE
++ export EXPT
++ DAT_DIR=/home/camille/DATA
++ export DAT_DIR
++ REG_DIR=/home/camille/DATA/volta
++ export REG_DIR
++ EXP_DIR=/home/camille/DATA/volta/BE
++ export EXP_DIR
++ FC_DIR=/home/camille/DATA/volta/BE/fc
++ export FC_DIR
++ OB_DIR=/home/camille/DATA/ob
++ export OB_DIR
++ DA_DIR=/home/camille/DATA/volta/BE/da
++ export DA_DIR
++ WPS_DIR=/home/camille/Build_WRF/WPS
++ export WPS_DIR
++ REL_DIR=/home/camille/Build_WRF
++ export REL_DIR
++ WRFVAR_DIR=/home/camille/Build_WRF/WRFDA
++ export WRFVAR_DIR
++ SCRIPTS_DIR=/home/camille/WRF_TAHMO
++ export SCRIPTS_DIR
++ INITIAL_DATE=2016063000
++ export INITIAL_DATE
++ RUN_DURATION=12
++ export RUN_DURATION
++ END_DATE=2016063012
++ export END_DATE
++ INTERVAL_START=6
++ export INTERVAL_START
++ CYCLING=true
++ export CYCLING
++ CYCLE_PERIOD=12
++ export CYCLE_PERIOD
++ LBC_FREQ=6
++ export LBC_FREQ
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ DOMAINS=01
++ export DOMAINS
++ NL_E_WE=163,184,184
++ export NL_E_WE
++ NL_E_SN=163,217,280
++ export NL_E_SN
++ NL_E_VERT=51,51,51
++ export NL_E_VERT
++ [[ 1 > 1 ]]
++ NL_DX=27000,9000,3000
++ export NL_DX
++ NL_DY=27000,9000,3000
++ export NL_DY
++ MAP_PROJ=lambert
++ export MAP_PROJ
++ REF_LAT=16.0
++ export REF_LAT
++ REF_LON=-2.0
++ export REF_LON
++ TRUELAT1=16.0
++ export TRUELAT1
++ TRUELAT2=-2.0
++ export TRUELAT2
++ STAND_LON=-2.0
++ export STAND_LON
++ GEOG_DATA_RES=default
++ export GEOG_DATA_RES
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_FRAMES_PER_OUTFILE=1,1,1
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=360,360,360
++ export NL_HISTORY_INTERVAL
++ NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ export NL_INPUT_FROM_FILE
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_MP_PHYSICS=4,4,4
++ export NL_MP_PHYSICS
++ NL_RADT=3,3,3
++ export NL_RADT
++ NL_SF_SFCLAY_PHYSICS=1,1,1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2,2,2
++ export NL_SF_SURFACE_PHYSICS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_BL_PBL_PHYSICS=1,1,1
++ export NL_BL_PBL_PHYSICS
++ NL_BLDT=0,0,0
++ export NL_BLDT
++ NL_CU_PHYSICS=3,3,0
++ export NL_CU_PHYSICS
++ NL_CUDT=5,5,0
++ export NL_CUDT
++ NL_RA_LW_PHYSICS=1,1,1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1,1,1
++ export NL_RA_SW_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_KM_OPT=4,4,4
++ export NL_KM_OPT
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ [[ 1 > 1 ]]
++ USE_SST=1
++ export USE_SST
++ [[ 1 == 1 ]]
++ NL_SST_UPDATE=1
++ export NL_SST_UPDATE
++ NL_AUXINPUT4_INNAME='wrflowinp_d<domain>'
++ export NL_AUXINPUT4_INNAME
++ NL_AUXINPUT4_INTERVAL=360,360,360
++ export NL_AUXINPUT4_INTERVAL
++ NL_IO_FORM_AUXINPUT4=2
++ export NL_IO_FORM_AUXINPUT4
++ USE_TSLIST=0
++ export USE_TSLIST
++ [[ 0 == 1 ]]
++ USE_ADAPTIVE_TIME_STEP=1
++ export USE_ADAPTIVE_TIME_STEP
++ [[ 1 == 1 ]]
++ NL_USE_ADAPTIVE_TIME_STEP=.true.
++ export NL_USE_ADAPTIVE_TIME_STEP
++ NL_STEP_TO_OUTPUT_TIME=.true.
++ export NL_STEP_TO_OUTPUT_TIME
++ NL_TARGET_CFL=1.2,1.2,1.2
++ export NL_TARGET_CFL
++ NL_TARGET_HCFL=0.84,0.84,0.84
++ export NL_TARGET_HCFL
++ NL_MAX_STEP_INCREASE_PCT=5,51,51
++ export NL_MAX_STEP_INCREASE_PCT
++ NL_STARTING_TIME_STEP=-1,-1,-1
++ export NL_STARTING_TIME_STEP
++ NL_MAX_TIME_STEP=300,240,180
++ export NL_MAX_TIME_STEP
++ NL_MIN_TIME_STEP=-1,-1,-1
++ export NL_MIN_TIME_STEP
++ NL_ADAPTATION_DOMAIN=1
++ export NL_ADAPTATION_DOMAIN
++ NL_ADJUST_OUTPUT_TIMES=.true.
++ export NL_ADJUST_OUTPUT_TIMES
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_WRITE_INPUT=.true.
++ export NL_WRITE_INPUT
++ NL_INPUTOUT_INTERVAL=360,360,360
++ export NL_INPUTOUT_INTERVAL
++ NL_INPUTOUT_BEGIN_H=12,12,12
++ export NL_INPUTOUT_BEGIN_H
++ NL_INPUTOUT_END_H=12,12,12
++ export NL_INPUTOUT_END_H
++ NL_INPUT_OUTNAME='wrfvar_input_d<domain>_<date>'
++ export NL_INPUT_OUTNAME
++ WINDOW_START=-1h30m
++ export WINDOW_START
++ WINDOW_END=1h30m
++ export WINDOW_END
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ USE_RADIANCE_OBS=0
++ export USE_RADIANCE_OBS
++ [[ 0 == 1 ]]
++ mkdir -p /home/camille/DATA/volta/BE
++ [[ -f /home/camille/DATA/volta/BE/namelist_wrf.ksh ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo 'export NL_MAX_DOM=1'
++ dom=1
++ [[ 1 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo 'export NL_MAX_DOM=1'
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ env
++ grep '.*NL_.*'
++ grep -v NAME
++ grep -v NL_MAX_DOM
++ grep -v 'NL_RTMINIT.*'
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_ADAPTATION_DOMAIN=1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_ADAPTATION_DOMAIN=1
++ cut -d '=' -f1
++ VAR_name=NL_ADAPTATION_DOMAIN
++ echo NL_ADAPTATION_DOMAIN=1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_ADAPTATION_DOMAIN=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_ADJUST_OUTPUT_TIMES=.true.
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_ADJUST_OUTPUT_TIMES=.true.
++ VAR_name=NL_ADJUST_OUTPUT_TIMES
++ echo NL_ADJUST_OUTPUT_TIMES=.true.
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=.true.
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_ADJUST_OUTPUT_TIMES=.true.
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_AUXINPUT4_INTERVAL=360,360,360
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_AUXINPUT4_INTERVAL=360,360,360
++ cut -d '=' -f1
++ VAR_name=NL_AUXINPUT4_INTERVAL
++ echo NL_AUXINPUT4_INTERVAL=360,360,360
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=360
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_AUXINPUT4_INTERVAL=360
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_BASE_TEMP=290.
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_BASE_TEMP=290.
++ cut -d '=' -f1
++ VAR_name=NL_BASE_TEMP
++ echo NL_BASE_TEMP=290.
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=290.
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_BASE_TEMP=290.
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_BLDT=0,0,0
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_BLDT=0,0,0
++ cut -d '=' -f1
++ VAR_name=NL_BLDT
++ echo NL_BLDT=0,0,0
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=0
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_BLDT=0
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_BL_PBL_PHYSICS=1,1,1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_BL_PBL_PHYSICS=1,1,1
++ cut -d '=' -f1
++ VAR_name=NL_BL_PBL_PHYSICS
++ echo NL_BL_PBL_PHYSICS=1,1,1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_BL_PBL_PHYSICS=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_CUDT=5,5,0
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_CUDT=5,5,0
++ cut -d '=' -f1
++ VAR_name=NL_CUDT
++ echo NL_CUDT=5,5,0
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=5
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_CUDT=5
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_CU_PHYSICS=3,3,0
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_CU_PHYSICS=3,3,0
++ cut -d '=' -f1
++ VAR_name=NL_CU_PHYSICS
++ echo NL_CU_PHYSICS=3,3,0
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=3
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_CU_PHYSICS=3
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_CV_OPTIONS=3
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_CV_OPTIONS=3
++ cut -d '=' -f1
++ VAR_name=NL_CV_OPTIONS
++ echo NL_CV_OPTIONS=3
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=3
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_CV_OPTIONS=3
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_DAMPCOEF=0.2
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_DAMPCOEF=0.2
++ cut -d '=' -f1
++ VAR_name=NL_DAMPCOEF
++ echo NL_DAMPCOEF=0.2
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=0.2
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_DAMPCOEF=0.2
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_DIFF_OPT=1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_DIFF_OPT=1
++ cut -d '=' -f1
++ VAR_name=NL_DIFF_OPT
++ echo NL_DIFF_OPT=1
++ cut -d '=' -f2
++ cut -d , -f1
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_DIFF_OPT=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_DX=27000,9000,3000
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_DX=27000,9000,3000
++ cut -d '=' -f1
++ VAR_name=NL_DX
++ echo NL_DX=27000,9000,3000
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=27000
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_DX=27000
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_DY=27000,9000,3000
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_DY=27000,9000,3000
++ cut -d '=' -f1
++ VAR_name=NL_DY
++ echo NL_DY=27000,9000,3000
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=27000
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_DY=27000
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_E_SN=163,217,280
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_E_SN=163,217,280
++ cut -d '=' -f1
++ VAR_name=NL_E_SN
++ echo NL_E_SN=163,217,280
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=163
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_E_SN=163
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_E_VERT=51,51,51
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_E_VERT=51,51,51
++ cut -d '=' -f1
++ VAR_name=NL_E_VERT
++ echo NL_E_VERT=51,51,51
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=51
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_E_VERT=51
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_E_WE=163,184,184
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_E_WE=163,184,184
++ cut -d '=' -f1
++ VAR_name=NL_E_WE
++ echo NL_E_WE=163,184,184
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=163
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_E_WE=163
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_FRAMES_PER_OUTFILE=1,1,1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_FRAMES_PER_OUTFILE=1,1,1
++ cut -d '=' -f1
++ VAR_name=NL_FRAMES_PER_OUTFILE
++ echo NL_FRAMES_PER_OUTFILE=1,1,1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_FRAMES_PER_OUTFILE=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_HISTORY_INTERVAL=360,360,360
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_HISTORY_INTERVAL=360,360,360
++ cut -d '=' -f1
++ VAR_name=NL_HISTORY_INTERVAL
++ echo NL_HISTORY_INTERVAL=360,360,360
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=360
++ cat
++ echo export NL_HISTORY_INTERVAL=360
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_INPUTOUT_BEGIN_H=12,12,12
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_INPUTOUT_BEGIN_H=12,12,12
++ cut -d '=' -f1
++ VAR_name=NL_INPUTOUT_BEGIN_H
++ echo NL_INPUTOUT_BEGIN_H=12,12,12
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=12
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_INPUTOUT_BEGIN_H=12
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_INPUTOUT_END_H=12,12,12
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_INPUTOUT_END_H=12,12,12
++ cut -d '=' -f1
++ VAR_name=NL_INPUTOUT_END_H
++ echo NL_INPUTOUT_END_H=12,12,12
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=12
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_INPUTOUT_END_H=12
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_INPUTOUT_INTERVAL=360,360,360
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_INPUTOUT_INTERVAL=360,360,360
++ cut -d '=' -f1
++ VAR_name=NL_INPUTOUT_INTERVAL
++ echo NL_INPUTOUT_INTERVAL=360,360,360
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=360
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_INPUTOUT_INTERVAL=360
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ cut -d '=' -f1
++ VAR_name=NL_INPUT_FROM_FILE
++ echo NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ cut -d '=' -f2
++ cut -d , -f1
++ VAR_value=.true.
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_INPUT_FROM_FILE=.true.
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_IO_FORM_AUXINPUT4=2
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_IO_FORM_AUXINPUT4=2
++ cut -d '=' -f1
++ VAR_name=NL_IO_FORM_AUXINPUT4
++ echo NL_IO_FORM_AUXINPUT4=2
++ cut -d '=' -f2
++ cut -d , -f1
++ VAR_value=2
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_IO_FORM_AUXINPUT4=2
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_IO_FORM_BOUNDARY=2
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_IO_FORM_BOUNDARY=2
++ cut -d '=' -f1
++ VAR_name=NL_IO_FORM_BOUNDARY
++ echo NL_IO_FORM_BOUNDARY=2
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=2
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_IO_FORM_BOUNDARY=2
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_IO_FORM_HISTORY=2
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_IO_FORM_HISTORY=2
++ cut -d '=' -f1
++ VAR_name=NL_IO_FORM_HISTORY
++ echo NL_IO_FORM_HISTORY=2
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=2
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_IO_FORM_HISTORY=2
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_IO_FORM_INPUT=2
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_IO_FORM_INPUT=2
++ cut -d '=' -f1
++ VAR_name=NL_IO_FORM_INPUT
++ echo NL_IO_FORM_INPUT=2
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=2
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_IO_FORM_INPUT=2
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_KM_OPT=4,4,4
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_KM_OPT=4,4,4
++ VAR_name=NL_KM_OPT
++ echo NL_KM_OPT=4,4,4
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=4
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_KM_OPT=4
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_MAX_STEP_INCREASE_PCT=5,51,51
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_MAX_STEP_INCREASE_PCT=5,51,51
++ cut -d '=' -f1
++ VAR_name=NL_MAX_STEP_INCREASE_PCT
++ echo NL_MAX_STEP_INCREASE_PCT=5,51,51
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=5
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_MAX_STEP_INCREASE_PCT=5
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_MAX_TIME_STEP=300,240,180
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_MAX_TIME_STEP=300,240,180
++ VAR_name=NL_MAX_TIME_STEP
++ echo NL_MAX_TIME_STEP=300,240,180
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=300
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_MAX_TIME_STEP=300
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_MIN_TIME_STEP=-1,-1,-1
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_MIN_TIME_STEP=-1,-1,-1
++ VAR_name=NL_MIN_TIME_STEP
++ echo NL_MIN_TIME_STEP=-1,-1,-1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=-1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_MIN_TIME_STEP=-1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_MP_PHYSICS=4,4,4
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_MP_PHYSICS=4,4,4
++ VAR_name=NL_MP_PHYSICS
++ echo NL_MP_PHYSICS=4,4,4
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=4
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_MP_PHYSICS=4
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_MP_ZERO_OUT=0
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_MP_ZERO_OUT=0
++ VAR_name=NL_MP_ZERO_OUT
++ echo NL_MP_ZERO_OUT=0
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=0
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_MP_ZERO_OUT=0
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_NUM_METGRID_LEVELS=32
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_NUM_METGRID_LEVELS=32
++ cut -d '=' -f1
++ VAR_name=NL_NUM_METGRID_LEVELS
++ echo NL_NUM_METGRID_LEVELS=32
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=32
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_NUM_METGRID_LEVELS=32
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_NUM_METGRID_SOIL_LEVELS=4
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_NUM_METGRID_SOIL_LEVELS=4
++ cut -d '=' -f1
++ VAR_name=NL_NUM_METGRID_SOIL_LEVELS
++ echo NL_NUM_METGRID_SOIL_LEVELS=4
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=4
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_NUM_METGRID_SOIL_LEVELS=4
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_NUM_SOIL_LAYERS=4
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_NUM_SOIL_LAYERS=4
++ cut -d '=' -f1
++ VAR_name=NL_NUM_SOIL_LAYERS
++ echo NL_NUM_SOIL_LAYERS=4
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=4
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_NUM_SOIL_LAYERS=4
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_OB_FORMAT=1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_OB_FORMAT=1
++ cut -d '=' -f1
++ VAR_name=NL_OB_FORMAT
++ echo NL_OB_FORMAT=1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_OB_FORMAT=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_P_TOP_REQUESTED=5000
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_P_TOP_REQUESTED=5000
++ VAR_name=NL_P_TOP_REQUESTED
++ echo NL_P_TOP_REQUESTED=5000
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=5000
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_P_TOP_REQUESTED=5000
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_RADT=3,3,3
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_RADT=3,3,3
++ cut -d '=' -f1
++ VAR_name=NL_RADT
++ echo NL_RADT=3,3,3
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=3
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_RADT=3
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_RA_LW_PHYSICS=1,1,1
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_RA_LW_PHYSICS=1,1,1
++ VAR_name=NL_RA_LW_PHYSICS
++ echo NL_RA_LW_PHYSICS=1,1,1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_RA_LW_PHYSICS=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_RA_SW_PHYSICS=1,1,1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_RA_SW_PHYSICS=1,1,1
++ cut -d '=' -f1
++ VAR_name=NL_RA_SW_PHYSICS
++ echo NL_RA_SW_PHYSICS=1,1,1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_RA_SW_PHYSICS=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_SF_SFCLAY_PHYSICS=1,1,1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_SF_SFCLAY_PHYSICS=1,1,1
++ cut -d '=' -f1
++ VAR_name=NL_SF_SFCLAY_PHYSICS
++ echo NL_SF_SFCLAY_PHYSICS=1,1,1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_SF_SFCLAY_PHYSICS=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_SF_SURFACE_PHYSICS=2,2,2
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_SF_SURFACE_PHYSICS=2,2,2
++ VAR_name=NL_SF_SURFACE_PHYSICS
++ echo NL_SF_SURFACE_PHYSICS=2,2,2
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=2
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_SF_SURFACE_PHYSICS=2
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_SMOOTH_OPTION=0
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_SMOOTH_OPTION=0
++ cut -d '=' -f1
++ VAR_name=NL_SMOOTH_OPTION
++ echo NL_SMOOTH_OPTION=0
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=0
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_SMOOTH_OPTION=0
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_SPECIFIED=.true.
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_SPECIFIED=.true.
++ cut -d '=' -f1
++ VAR_name=NL_SPECIFIED
++ echo NL_SPECIFIED=.true.
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=.true.
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_SPECIFIED=.true.
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_SST_UPDATE=1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_SST_UPDATE=1
++ cut -d '=' -f1
++ VAR_name=NL_SST_UPDATE
++ echo NL_SST_UPDATE=1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_SST_UPDATE=1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_STARTING_TIME_STEP=-1,-1,-1
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_STARTING_TIME_STEP=-1,-1,-1
++ cut -d '=' -f1
++ VAR_name=NL_STARTING_TIME_STEP
++ echo NL_STARTING_TIME_STEP=-1,-1,-1
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=-1
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_STARTING_TIME_STEP=-1
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_STEP_TO_OUTPUT_TIME=.true.
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_STEP_TO_OUTPUT_TIME=.true.
++ cut -d '=' -f1
++ VAR_name=NL_STEP_TO_OUTPUT_TIME
++ echo NL_STEP_TO_OUTPUT_TIME=.true.
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=.true.
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_STEP_TO_OUTPUT_TIME=.true.
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_TARGET_CFL=1.2,1.2,1.2
++ dom=1
++ [[ 1 -le 1 ]]
++ cut -d '=' -f1
++ echo NL_TARGET_CFL=1.2,1.2,1.2
++ VAR_name=NL_TARGET_CFL
++ echo NL_TARGET_CFL=1.2,1.2,1.2
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=1.2
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_TARGET_CFL=1.2
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_TARGET_HCFL=0.84,0.84,0.84
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_TARGET_HCFL=0.84,0.84,0.84
++ cut -d '=' -f1
++ VAR_name=NL_TARGET_HCFL
++ echo NL_TARGET_HCFL=0.84,0.84,0.84
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=0.84
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_TARGET_HCFL=0.84
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_TIME_STEP=120
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_TIME_STEP=120
++ cut -d '=' -f1
++ VAR_name=NL_TIME_STEP
++ echo NL_TIME_STEP=120
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=120
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_TIME_STEP=120
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_USE_ADAPTIVE_TIME_STEP=.true.
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_USE_ADAPTIVE_TIME_STEP=.true.
++ cut -d '=' -f1
++ VAR_name=NL_USE_ADAPTIVE_TIME_STEP
++ echo NL_USE_ADAPTIVE_TIME_STEP=.true.
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=.true.
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_USE_ADAPTIVE_TIME_STEP=.true.
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_WRITE_INPUT=.true.
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_WRITE_INPUT=.true.
++ cut -d '=' -f1
++ VAR_name=NL_WRITE_INPUT
++ echo NL_WRITE_INPUT=.true.
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=.true.
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_WRITE_INPUT=.true.
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ echo export NL_W_DAMPING=0
++ dom=1
++ [[ 1 -le 1 ]]
++ echo NL_W_DAMPING=0
++ cut -d '=' -f1
++ VAR_name=NL_W_DAMPING
++ echo NL_W_DAMPING=0
++ cut -d , -f1
++ cut -d '=' -f2
++ VAR_value=0
++ cat
++ 1>> /home/camille/DATA/volta/BE/namelist_d01.ksh
++ echo export NL_W_DAMPING=0
++ let dom=dom+1
++ [[ 2 -le 1 ]]
++ [[ 2016063000 < 2016063012 ]]
++ DATE=2016063000
++ export DATE
++ /home/camille/Build_WRF/WRFDA/var/da/da_advance_time.exe 2016063000 12
++ FINAL_DATE=2016063012
++ export FINAL_DATE
++ FCST_RANGE=12
++ export FCST_RANGE
++ RUN_DIR=/home/camille/DATA/volta/BE/wps
++ export RUN_DIR
++ rm -rf /home/camille/DATA/volta/BE/wps
++ cut -d , -f1
++ echo 27000,9000,3000
++ NL_DX=27000
++ export NL_DX
++ cut -d , -f1
++ echo 27000,9000,3000
++ NL_DY=27000
++ export NL_DY
++ ./da_run_wps.ksh
+./da_run_wps.ksh[10]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+./da_run_wps.ksh[10]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+<HTML><HEAD><TITLE>BE wps</TITLE></HEAD><BODY><H1>BE wps</H1><PRE>
+wo  7 sep 2016 15:32:41 CEST
+WPS_DIR        <A HREF="/home/camille/Build_WRF/WPS"</a>/home/camille/Build_WRF/WPS</a>
+DATE           2016063000
+END_DATE       2016063012
+WPS_INPUT_DIR  <A HREF="file:/home/camille/DATA/GFS"</a>/home/camille/DATA/GFS</a>
+WPS_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/BE/rc"</a>/home/camille/DATA/volta/BE/rc</a>
+RUN_DIR        <A HREF="file:/home/camille/DATA/volta/BE/wps"</a>/home/camille/DATA/volta/BE/wps</a>
+WORK_DIR       <A HREF="file:/home/camille/DATA/volta/BE/wps/working"</a>/home/camille/DATA/volta/BE/wps/working</a>
+/home/camille/WRF_TAHMO/da_create_wps_namelist.ksh[14]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+/home/camille/WRF_TAHMO/da_create_wps_namelist.ksh[14]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+<A HREF="namelist.wps">namelist.wps</a>
+Parsed 25 entries in GEOGRID.TBL
+Processing domain 1 of 1
+  Processing XLAT and XLONG
+  Processing MAPFAC
+  Processing F and E
+  Processing ROTANG
+  Processing LANDUSEF
+  Calculating landmask from LANDUSEF ( WATER =  17  21 )
+  Processing HGT_M
+  Processing SOILTEMP
+  Processing SOILCTOP
+  Processing SCT_DOM
+  Processing SOILCBOT
+  Processing SCB_DOM
+  Processing ALBEDO12M
+  Processing GREENFRAC
+  Processing LAI12M
+  Processing SNOALB
+  Processing SLOPECAT
+  Processing SLOPECAT
+  Processing CON
+  Processing VAR
+  Processing OA1
+  Processing OA2
+  Processing OA3
+  Processing OA4
+  Processing OL1
+  Processing OL2
+  Processing OL3
+  Processing OL4
+  Processing VAR_SSO
+  Processing LAKE_DEPTH
+  Processing URB_PARAM
+
+  Optional fields not processed by geogrid:
+    IMPERV (priority=1, resolution='default', path='/home/camille/Build_WRF/WPS_GEOG/nlcd2011_imp_ll_9s/')
+    CANFRA (priority=1, resolution='default', path='/home/camille/Build_WRF/WPS_GEOG/nlcd2011_can_ll_9s/')
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of geogrid.        !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<A HREF="geogrid.log.0000">geogrid.log.0000</a>
+/home/camille/DATA/GFS/2016063000
+/home/camille/DATA/GFS/2016063006
+/home/camille/DATA/GFS/2016063012
+<A HREF="ungrib.log">ungrib.log</a>
+Processing domain 1 of 1
+ Processing 2016-06-30_00
+    ./FILE
+ Processing 2016-06-30_06
+    ./FILE
+ Processing 2016-06-30_12
+    ./FILE
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling:Note: The following floating-point exceptions are signalling:Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ IEEE_DENORMAL
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+<A HREF="metgrid.log.0000">metgrid.log.0000</a>
+/home/camille/DATA/volta/BE/wps/working
+/home/camille/WRF_TAHMO
+wo  7 sep 2016 15:33:22 CEST
+</BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ RUN_DIR=/home/camille/DATA/volta/BE/real
++ export RUN_DIR
++ rm -rf /home/camille/DATA/volta/BE/real
++ . /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ NL_ADAPTATION_DOMAIN=1
++ export NL_ADAPTATION_DOMAIN
++ NL_ADJUST_OUTPUT_TIMES=.true.
++ export NL_ADJUST_OUTPUT_TIMES
++ NL_AUXINPUT4_INTERVAL=360,360,360
++ export NL_AUXINPUT4_INTERVAL
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_BLDT=0,0,0
++ export NL_BLDT
++ NL_BL_PBL_PHYSICS=1,1,1
++ export NL_BL_PBL_PHYSICS
++ NL_CUDT=5,5,0
++ export NL_CUDT
++ NL_CU_PHYSICS=3,3,0
++ export NL_CU_PHYSICS
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_DX=27000,9000,3000
++ export NL_DX
++ NL_DY=27000,9000,3000
++ export NL_DY
++ NL_E_SN=163,217,280
++ export NL_E_SN
++ NL_E_VERT=51,51,51
++ export NL_E_VERT
++ NL_E_WE=163,184,184
++ export NL_E_WE
++ NL_FRAMES_PER_OUTFILE=1,1,1
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=360,360,360
++ export NL_HISTORY_INTERVAL
++ NL_INPUTOUT_BEGIN_H=12,12,12
++ export NL_INPUTOUT_BEGIN_H
++ NL_INPUTOUT_END_H=12,12,12
++ export NL_INPUTOUT_END_H
++ NL_INPUTOUT_INTERVAL=360,360,360
++ export NL_INPUTOUT_INTERVAL
++ NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ export NL_INPUT_FROM_FILE
++ NL_IO_FORM_AUXINPUT4=2
++ export NL_IO_FORM_AUXINPUT4
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_KM_OPT=4,4,4
++ export NL_KM_OPT
++ NL_MAX_STEP_INCREASE_PCT=5,51,51
++ export NL_MAX_STEP_INCREASE_PCT
++ NL_MAX_TIME_STEP=300,240,180
++ export NL_MAX_TIME_STEP
++ NL_MIN_TIME_STEP=-1,-1,-1
++ export NL_MIN_TIME_STEP
++ NL_MP_PHYSICS=4,4,4
++ export NL_MP_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_RADT=3,3,3
++ export NL_RADT
++ NL_RA_LW_PHYSICS=1,1,1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1,1,1
++ export NL_RA_SW_PHYSICS
++ NL_SF_SFCLAY_PHYSICS=1,1,1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2,2,2
++ export NL_SF_SURFACE_PHYSICS
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ NL_SST_UPDATE=1
++ export NL_SST_UPDATE
++ NL_STARTING_TIME_STEP=-1,-1,-1
++ export NL_STARTING_TIME_STEP
++ NL_STEP_TO_OUTPUT_TIME=.true.
++ export NL_STEP_TO_OUTPUT_TIME
++ NL_TARGET_CFL=1.2,1.2,1.2
++ export NL_TARGET_CFL
++ NL_TARGET_HCFL=0.84,0.84,0.84
++ export NL_TARGET_HCFL
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_USE_ADAPTIVE_TIME_STEP=.true.
++ export NL_USE_ADAPTIVE_TIME_STEP
++ NL_WRITE_INPUT=.true.
++ export NL_WRITE_INPUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ ./da_run_real.ksh
+./da_run_real.ksh[16]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+./da_run_real.ksh[16]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+<HTML><HEAD><TITLE>BE real</TITLE></HEAD><BODY>
+<H1>BE real</H1><PRE>
+wo  7 sep 2016 15:33:22 CEST
+REL_DIR         <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR         <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR         <A HREF="file:/home/camille/DATA/volta/BE/real">/home/camille/DATA/volta/BE/real</a>
+WORK_DIR        <A HREF="file:/home/camille/DATA/volta/BE/real/working">/home/camille/DATA/volta/BE/real/working</a>
+REAL_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+REAL_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+DATE            2016063000
+END_DATE        2016063012
+FCST_RANGE      12
+DOMAINS         01
+<A HREF="namelist.input">Namelist input</a>
+ starting wrf task            0  of            6
+ starting wrf task            1  of            6
+ starting wrf task            2  of            6
+ starting wrf task            3  of            6
+ starting wrf task            4  of            6
+ starting wrf task            5  of            6
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+09/07/16 15:33:32 Ended 0
+wo  7 sep 2016 15:33:32 CEST
+</BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ FCST_RANGE=12
++ export FCST_RANGE
++ CYCLE_NUMBER=0
++ export CYCLE_NUMBER
++ [[ 2016063000 < 2016063012 ]]
++ RUN_DIR=/home/camille/DATA/volta/BE/wrfvar
++ export RUN_DIR
++ rm -rf /home/camille/DATA/volta/BE/wrfvar
++ DOMAIN=01
++ export DOMAIN
++ . /home/camille/DATA/volta/BE/namelist_d01.ksh
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ NL_ADAPTATION_DOMAIN=1
++ export NL_ADAPTATION_DOMAIN
++ NL_ADJUST_OUTPUT_TIMES=.true.
++ export NL_ADJUST_OUTPUT_TIMES
++ NL_AUXINPUT4_INTERVAL=360
++ export NL_AUXINPUT4_INTERVAL
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_BLDT=0
++ export NL_BLDT
++ NL_BL_PBL_PHYSICS=1
++ export NL_BL_PBL_PHYSICS
++ NL_CUDT=5
++ export NL_CUDT
++ NL_CU_PHYSICS=3
++ export NL_CU_PHYSICS
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_DX=27000
++ export NL_DX
++ NL_DY=27000
++ export NL_DY
++ NL_E_SN=163
++ export NL_E_SN
++ NL_E_VERT=51
++ export NL_E_VERT
++ NL_E_WE=163
++ export NL_E_WE
++ NL_FRAMES_PER_OUTFILE=1
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=360
++ export NL_HISTORY_INTERVAL
++ NL_INPUTOUT_BEGIN_H=12
++ export NL_INPUTOUT_BEGIN_H
++ NL_INPUTOUT_END_H=12
++ export NL_INPUTOUT_END_H
++ NL_INPUTOUT_INTERVAL=360
++ export NL_INPUTOUT_INTERVAL
++ NL_INPUT_FROM_FILE=.true.
++ export NL_INPUT_FROM_FILE
++ NL_IO_FORM_AUXINPUT4=2
++ export NL_IO_FORM_AUXINPUT4
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_KM_OPT=4
++ export NL_KM_OPT
++ NL_MAX_STEP_INCREASE_PCT=5
++ export NL_MAX_STEP_INCREASE_PCT
++ NL_MAX_TIME_STEP=300
++ export NL_MAX_TIME_STEP
++ NL_MIN_TIME_STEP=-1
++ export NL_MIN_TIME_STEP
++ NL_MP_PHYSICS=4
++ export NL_MP_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_RADT=3
++ export NL_RADT
++ NL_RA_LW_PHYSICS=1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1
++ export NL_RA_SW_PHYSICS
++ NL_SF_SFCLAY_PHYSICS=1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2
++ export NL_SF_SURFACE_PHYSICS
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ NL_SST_UPDATE=1
++ export NL_SST_UPDATE
++ NL_STARTING_TIME_STEP=-1
++ export NL_STARTING_TIME_STEP
++ NL_STEP_TO_OUTPUT_TIME=.true.
++ export NL_STEP_TO_OUTPUT_TIME
++ NL_TARGET_CFL=1.2
++ export NL_TARGET_CFL
++ NL_TARGET_HCFL=0.84
++ export NL_TARGET_HCFL
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_USE_ADAPTIVE_TIME_STEP=.true.
++ export NL_USE_ADAPTIVE_TIME_STEP
++ NL_WRITE_INPUT=.true.
++ export NL_WRITE_INPUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ ./run_wrfvar2.ksh
+wo  7 sep 2016 15:33:32 CEST
+REL_DIR               <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRFVAR_DIR            <A HREF="file:/home/camille/Build_WRF/WRFDA">/home/camille/Build_WRF/WRFDA</a>
+DA_BACK_ERRORS        /home/camille/Build_WRF/WRFDA/var/run/be.dat.cv3
+OB_DIR                <A HREF="file:/home/camille/DATA/ob">/home/camille/DATA/ob</a>
+RC_DIR                <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+FC_DIR                <A HREF="file:/home/camille/DATA/volta/BE/fc">/home/camille/DATA/volta/BE/fc</a>
+DA_DIR                <A HREF="file:/home/camille/DATA/volta/BE/da">/home/camille/DATA/volta/BE/da</a>
+RUN_DIR               <A HREF="file:.">/home/camille/DATA/volta/BE/wrfvar</a>
+WORK_DIR              <A HREF="file:working">/home/camille/DATA/volta/BE/wrfvar/working</a>
+DA_ANALYSIS           analysis
+DATE                  2016063000
+WINDOW_START          -1h30m
+WINDOW_END            1h30m
+<A HREF="namelist.input">Namelist.input</a>
+ starting wrf task            0  of            6
+ starting wrf task            1  of            6
+ starting wrf task            2  of            6
+ starting wrf task            3  of            6
+ starting wrf task            4  of            6
+ starting wrf task            5  of            6
+
+real	0m0,07s
+user	0m0,06s
+sys	0m0,00s
+ *** Update_bc completed successfully ***
+qcstat_conv_01
+<A HREF="namelist.output">Namelist.output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+<A HREF="cost_fn">Cost function</a>
+<A HREF="grad_fn">Gradient function</a>
+<A HREF="statistics">Statistics</a>
+09/07/16 15:34:36 Ended 0
+</PRE></BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ let CYCLE_NUMBER=CYCLE_NUMBER+1
++ RUN_DIR=/home/camille/DATA/volta/BE/wrf
++ export RUN_DIR
++ WRF_INPUT_DIR=/home/camille/DATA/volta/BE/da
++ export WRF_INPUT_DIR
++ rm -rf /home/camille/DATA/volta/BE/wrf
++ . /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ NL_ADAPTATION_DOMAIN=1
++ export NL_ADAPTATION_DOMAIN
++ NL_ADJUST_OUTPUT_TIMES=.true.
++ export NL_ADJUST_OUTPUT_TIMES
++ NL_AUXINPUT4_INTERVAL=360,360,360
++ export NL_AUXINPUT4_INTERVAL
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_BLDT=0,0,0
++ export NL_BLDT
++ NL_BL_PBL_PHYSICS=1,1,1
++ export NL_BL_PBL_PHYSICS
++ NL_CUDT=5,5,0
++ export NL_CUDT
++ NL_CU_PHYSICS=3,3,0
++ export NL_CU_PHYSICS
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_DX=27000,9000,3000
++ export NL_DX
++ NL_DY=27000,9000,3000
++ export NL_DY
++ NL_E_SN=163,217,280
++ export NL_E_SN
++ NL_E_VERT=51,51,51
++ export NL_E_VERT
++ NL_E_WE=163,184,184
++ export NL_E_WE
++ NL_FRAMES_PER_OUTFILE=1,1,1
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=360,360,360
++ export NL_HISTORY_INTERVAL
++ NL_INPUTOUT_BEGIN_H=12,12,12
++ export NL_INPUTOUT_BEGIN_H
++ NL_INPUTOUT_END_H=12,12,12
++ export NL_INPUTOUT_END_H
++ NL_INPUTOUT_INTERVAL=360,360,360
++ export NL_INPUTOUT_INTERVAL
++ NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ export NL_INPUT_FROM_FILE
++ NL_IO_FORM_AUXINPUT4=2
++ export NL_IO_FORM_AUXINPUT4
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_KM_OPT=4,4,4
++ export NL_KM_OPT
++ NL_MAX_STEP_INCREASE_PCT=5,51,51
++ export NL_MAX_STEP_INCREASE_PCT
++ NL_MAX_TIME_STEP=300,240,180
++ export NL_MAX_TIME_STEP
++ NL_MIN_TIME_STEP=-1,-1,-1
++ export NL_MIN_TIME_STEP
++ NL_MP_PHYSICS=4,4,4
++ export NL_MP_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_RADT=3,3,3
++ export NL_RADT
++ NL_RA_LW_PHYSICS=1,1,1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1,1,1
++ export NL_RA_SW_PHYSICS
++ NL_SF_SFCLAY_PHYSICS=1,1,1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2,2,2
++ export NL_SF_SURFACE_PHYSICS
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ NL_SST_UPDATE=1
++ export NL_SST_UPDATE
++ NL_STARTING_TIME_STEP=-1,-1,-1
++ export NL_STARTING_TIME_STEP
++ NL_STEP_TO_OUTPUT_TIME=.true.
++ export NL_STEP_TO_OUTPUT_TIME
++ NL_TARGET_CFL=1.2,1.2,1.2
++ export NL_TARGET_CFL
++ NL_TARGET_HCFL=0.84,0.84,0.84
++ export NL_TARGET_HCFL
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_USE_ADAPTIVE_TIME_STEP=.true.
++ export NL_USE_ADAPTIVE_TIME_STEP
++ NL_WRITE_INPUT=.true.
++ export NL_WRITE_INPUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ ./run_wrf.ksh
+.true.
+./run_wrf.ksh[21]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+./run_wrf.ksh[21]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+.true.
+<HTML><HEAD><TITLE>BE wrf</TITLE></HEAD><BODY>
+<H1>BE wrf</H1><PRE>
+wo  7 sep 2016 15:34:36 CEST
+REL_DIR        <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR      <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR        <A HREF="file:/home/camille/DATA/volta/BE/wrf">/home/camille/DATA/volta/BE/wrf</a>
+WORK_DIR       <A HREF="file:/home/camille/DATA/volta/BE/wrf/working">/home/camille/DATA/volta/BE/wrf/working</a>
+RC_DIR         <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+FC_DIR_DATE    <A HREF="file:/home/camille/DATA/volta/BE/fc/2016063000">/home/camille/DATA/volta/BE/fc/2016063000</a>
+WRF_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/BE/da">/home/camille/DATA/volta/BE/da</a>
+DATE           2016063000
+END_DATE       2016063012
+FCST_RANGE     12
+LBC_FREQ       6
+DOMAINS        01
+MEM            1
+<A HREF="namelist.input">Namelist input</a>
+ starting wrf task            0  of            6
+ starting wrf task            1  of            6
+ starting wrf task            2  of            6
+ starting wrf task            3  of            6
+ starting wrf task            4  of            6
+ starting wrf task            5  of            6
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl_/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl_/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl_>Other RSL output</a>
+09/07/16 15:39:43 Ended 0
+wo  7 sep 2016 15:39:43 CEST
+</BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ /home/camille/Build_WRF/WRFDA/var/build/da_advance_time.exe 2016063000 12
++ DATE=2016063012
++ export DATE
++ [[ 2016063012 < 2016063012 ]]
++ /home/camille/Build_WRF/WRFDA/var/build/da_advance_time.exe 2016063000 6
++ INITIAL_DATE=2016063006
++ export INITIAL_DATE
++ [[ 2016063006 < 2016063012 ]]
++ DATE=2016063006
++ export DATE
++ /home/camille/Build_WRF/WRFDA/var/da/da_advance_time.exe 2016063006 12
++ FINAL_DATE=2016063018
++ export FINAL_DATE
++ FCST_RANGE=12
++ export FCST_RANGE
++ RUN_DIR=/home/camille/DATA/volta/BE/wps
++ export RUN_DIR
++ rm -rf /home/camille/DATA/volta/BE/wps
++ cut -d , -f1
++ echo 27000,9000,3000
++ NL_DX=27000
++ export NL_DX
++ echo 27000,9000,3000
++ cut -d , -f1
++ NL_DY=27000
++ export NL_DY
++ ./da_run_wps.ksh
+./da_run_wps.ksh[10]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+./da_run_wps.ksh[10]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+<HTML><HEAD><TITLE>BE wps</TITLE></HEAD><BODY><H1>BE wps</H1><PRE>
+wo  7 sep 2016 15:39:43 CEST
+WPS_DIR        <A HREF="/home/camille/Build_WRF/WPS"</a>/home/camille/Build_WRF/WPS</a>
+DATE           2016063006
+END_DATE       2016063018
+WPS_INPUT_DIR  <A HREF="file:/home/camille/DATA/GFS"</a>/home/camille/DATA/GFS</a>
+WPS_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/BE/rc"</a>/home/camille/DATA/volta/BE/rc</a>
+RUN_DIR        <A HREF="file:/home/camille/DATA/volta/BE/wps"</a>/home/camille/DATA/volta/BE/wps</a>
+WORK_DIR       <A HREF="file:/home/camille/DATA/volta/BE/wps/working"</a>/home/camille/DATA/volta/BE/wps/working</a>
+/home/camille/WRF_TAHMO/da_create_wps_namelist.ksh[14]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+/home/camille/WRF_TAHMO/da_create_wps_namelist.ksh[14]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+<A HREF="namelist.wps">namelist.wps</a>
+Parsed 25 entries in GEOGRID.TBL
+Processing domain 1 of 1
+  Processing XLAT and XLONG
+  Processing MAPFAC
+  Processing F and E
+  Processing ROTANG
+  Processing LANDUSEF
+  Calculating landmask from LANDUSEF ( WATER =  17  21 )
+  Processing HGT_M
+  Processing SOILTEMP
+  Processing SOILCTOP
+  Processing SCT_DOM
+  Processing SOILCBOT
+  Processing SCB_DOM
+  Processing ALBEDO12M
+  Processing GREENFRAC
+  Processing LAI12M
+  Processing SNOALB
+  Processing SLOPECAT
+  Processing SLOPECAT
+  Processing CON
+  Processing VAR
+  Processing OA1
+  Processing OA2
+  Processing OA3
+  Processing OA4
+  Processing OL1
+  Processing OL2
+  Processing OL3
+  Processing OL4
+  Processing VAR_SSO
+  Processing LAKE_DEPTH
+  Processing URB_PARAM
+
+  Optional fields not processed by geogrid:
+    IMPERV (priority=1, resolution='default', path='/home/camille/Build_WRF/WPS_GEOG/nlcd2011_imp_ll_9s/')
+    CANFRA (priority=1, resolution='default', path='/home/camille/Build_WRF/WPS_GEOG/nlcd2011_can_ll_9s/')
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of geogrid.        !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<A HREF="geogrid.log.0000">geogrid.log.0000</a>
+/home/camille/DATA/GFS/2016063006
+/home/camille/DATA/GFS/2016063012
+/home/camille/DATA/GFS/2016063018
+<A HREF="ungrib.log">ungrib.log</a>
+Processing domain 1 of 1
+ Processing 2016-06-30_06
+    ./FILE
+ Processing 2016-06-30_12
+    ./FILE
+ Processing 2016-06-30_18
+    ./FILE
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling:Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ IEEE_DENORMAL
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+<A HREF="metgrid.log.0000">metgrid.log.0000</a>
+/home/camille/DATA/volta/BE/wps/working
+/home/camille/WRF_TAHMO
+wo  7 sep 2016 15:40:26 CEST
+</BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ RUN_DIR=/home/camille/DATA/volta/BE/real
++ export RUN_DIR
++ rm -rf /home/camille/DATA/volta/BE/real
++ . /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ NL_ADAPTATION_DOMAIN=1
++ export NL_ADAPTATION_DOMAIN
++ NL_ADJUST_OUTPUT_TIMES=.true.
++ export NL_ADJUST_OUTPUT_TIMES
++ NL_AUXINPUT4_INTERVAL=360,360,360
++ export NL_AUXINPUT4_INTERVAL
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_BLDT=0,0,0
++ export NL_BLDT
++ NL_BL_PBL_PHYSICS=1,1,1
++ export NL_BL_PBL_PHYSICS
++ NL_CUDT=5,5,0
++ export NL_CUDT
++ NL_CU_PHYSICS=3,3,0
++ export NL_CU_PHYSICS
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_DX=27000,9000,3000
++ export NL_DX
++ NL_DY=27000,9000,3000
++ export NL_DY
++ NL_E_SN=163,217,280
++ export NL_E_SN
++ NL_E_VERT=51,51,51
++ export NL_E_VERT
++ NL_E_WE=163,184,184
++ export NL_E_WE
++ NL_FRAMES_PER_OUTFILE=1,1,1
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=360,360,360
++ export NL_HISTORY_INTERVAL
++ NL_INPUTOUT_BEGIN_H=12,12,12
++ export NL_INPUTOUT_BEGIN_H
++ NL_INPUTOUT_END_H=12,12,12
++ export NL_INPUTOUT_END_H
++ NL_INPUTOUT_INTERVAL=360,360,360
++ export NL_INPUTOUT_INTERVAL
++ NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ export NL_INPUT_FROM_FILE
++ NL_IO_FORM_AUXINPUT4=2
++ export NL_IO_FORM_AUXINPUT4
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_KM_OPT=4,4,4
++ export NL_KM_OPT
++ NL_MAX_STEP_INCREASE_PCT=5,51,51
++ export NL_MAX_STEP_INCREASE_PCT
++ NL_MAX_TIME_STEP=300,240,180
++ export NL_MAX_TIME_STEP
++ NL_MIN_TIME_STEP=-1,-1,-1
++ export NL_MIN_TIME_STEP
++ NL_MP_PHYSICS=4,4,4
++ export NL_MP_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_RADT=3,3,3
++ export NL_RADT
++ NL_RA_LW_PHYSICS=1,1,1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1,1,1
++ export NL_RA_SW_PHYSICS
++ NL_SF_SFCLAY_PHYSICS=1,1,1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2,2,2
++ export NL_SF_SURFACE_PHYSICS
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ NL_SST_UPDATE=1
++ export NL_SST_UPDATE
++ NL_STARTING_TIME_STEP=-1,-1,-1
++ export NL_STARTING_TIME_STEP
++ NL_STEP_TO_OUTPUT_TIME=.true.
++ export NL_STEP_TO_OUTPUT_TIME
++ NL_TARGET_CFL=1.2,1.2,1.2
++ export NL_TARGET_CFL
++ NL_TARGET_HCFL=0.84,0.84,0.84
++ export NL_TARGET_HCFL
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_USE_ADAPTIVE_TIME_STEP=.true.
++ export NL_USE_ADAPTIVE_TIME_STEP
++ NL_WRITE_INPUT=.true.
++ export NL_WRITE_INPUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ ./da_run_real.ksh
+./da_run_real.ksh[16]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+./da_run_real.ksh[16]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+<HTML><HEAD><TITLE>BE real</TITLE></HEAD><BODY>
+<H1>BE real</H1><PRE>
+wo  7 sep 2016 15:40:26 CEST
+REL_DIR         <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR         <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR         <A HREF="file:/home/camille/DATA/volta/BE/real">/home/camille/DATA/volta/BE/real</a>
+WORK_DIR        <A HREF="file:/home/camille/DATA/volta/BE/real/working">/home/camille/DATA/volta/BE/real/working</a>
+REAL_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+REAL_OUTPUT_DIR <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+DATE            2016063006
+END_DATE        2016063018
+FCST_RANGE      12
+DOMAINS         01
+<A HREF="namelist.input">Namelist input</a>
+ starting wrf task            0  of            6
+ starting wrf task            1  of            6
+ starting wrf task            2  of            6
+ starting wrf task            3  of            6
+ starting wrf task            4  of            6
+ starting wrf task            5  of            6
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+09/07/16 15:40:31 Ended 0
+wo  7 sep 2016 15:40:31 CEST
+</BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ FCST_RANGE=12
++ export FCST_RANGE
++ CYCLE_NUMBER=0
++ export CYCLE_NUMBER
++ [[ 2016063006 < 2016063018 ]]
++ RUN_DIR=/home/camille/DATA/volta/BE/wrfvar
++ export RUN_DIR
++ rm -rf /home/camille/DATA/volta/BE/wrfvar
++ DOMAIN=01
++ export DOMAIN
++ . /home/camille/DATA/volta/BE/namelist_d01.ksh
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ NL_ADAPTATION_DOMAIN=1
++ export NL_ADAPTATION_DOMAIN
++ NL_ADJUST_OUTPUT_TIMES=.true.
++ export NL_ADJUST_OUTPUT_TIMES
++ NL_AUXINPUT4_INTERVAL=360
++ export NL_AUXINPUT4_INTERVAL
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_BLDT=0
++ export NL_BLDT
++ NL_BL_PBL_PHYSICS=1
++ export NL_BL_PBL_PHYSICS
++ NL_CUDT=5
++ export NL_CUDT
++ NL_CU_PHYSICS=3
++ export NL_CU_PHYSICS
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_DX=27000
++ export NL_DX
++ NL_DY=27000
++ export NL_DY
++ NL_E_SN=163
++ export NL_E_SN
++ NL_E_VERT=51
++ export NL_E_VERT
++ NL_E_WE=163
++ export NL_E_WE
++ NL_FRAMES_PER_OUTFILE=1
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=360
++ export NL_HISTORY_INTERVAL
++ NL_INPUTOUT_BEGIN_H=12
++ export NL_INPUTOUT_BEGIN_H
++ NL_INPUTOUT_END_H=12
++ export NL_INPUTOUT_END_H
++ NL_INPUTOUT_INTERVAL=360
++ export NL_INPUTOUT_INTERVAL
++ NL_INPUT_FROM_FILE=.true.
++ export NL_INPUT_FROM_FILE
++ NL_IO_FORM_AUXINPUT4=2
++ export NL_IO_FORM_AUXINPUT4
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_KM_OPT=4
++ export NL_KM_OPT
++ NL_MAX_STEP_INCREASE_PCT=5
++ export NL_MAX_STEP_INCREASE_PCT
++ NL_MAX_TIME_STEP=300
++ export NL_MAX_TIME_STEP
++ NL_MIN_TIME_STEP=-1
++ export NL_MIN_TIME_STEP
++ NL_MP_PHYSICS=4
++ export NL_MP_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_RADT=3
++ export NL_RADT
++ NL_RA_LW_PHYSICS=1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1
++ export NL_RA_SW_PHYSICS
++ NL_SF_SFCLAY_PHYSICS=1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2
++ export NL_SF_SURFACE_PHYSICS
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ NL_SST_UPDATE=1
++ export NL_SST_UPDATE
++ NL_STARTING_TIME_STEP=-1
++ export NL_STARTING_TIME_STEP
++ NL_STEP_TO_OUTPUT_TIME=.true.
++ export NL_STEP_TO_OUTPUT_TIME
++ NL_TARGET_CFL=1.2
++ export NL_TARGET_CFL
++ NL_TARGET_HCFL=0.84
++ export NL_TARGET_HCFL
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_USE_ADAPTIVE_TIME_STEP=.true.
++ export NL_USE_ADAPTIVE_TIME_STEP
++ NL_WRITE_INPUT=.true.
++ export NL_WRITE_INPUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ ./run_wrfvar2.ksh
+wo  7 sep 2016 15:40:31 CEST
+REL_DIR               <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRFVAR_DIR            <A HREF="file:/home/camille/Build_WRF/WRFDA">/home/camille/Build_WRF/WRFDA</a>
+DA_BACK_ERRORS        /home/camille/Build_WRF/WRFDA/var/run/be.dat.cv3
+OB_DIR                <A HREF="file:/home/camille/DATA/ob">/home/camille/DATA/ob</a>
+RC_DIR                <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+FC_DIR                <A HREF="file:/home/camille/DATA/volta/BE/fc">/home/camille/DATA/volta/BE/fc</a>
+DA_DIR                <A HREF="file:/home/camille/DATA/volta/BE/da">/home/camille/DATA/volta/BE/da</a>
+RUN_DIR               <A HREF="file:.">/home/camille/DATA/volta/BE/wrfvar</a>
+WORK_DIR              <A HREF="file:working">/home/camille/DATA/volta/BE/wrfvar/working</a>
+DA_ANALYSIS           analysis
+DATE                  2016063006
+WINDOW_START          -1h30m
+WINDOW_END            1h30m
+<A HREF="namelist.input">Namelist.input</a>
+ starting wrf task            0  of            6
+ starting wrf task            1  of            6
+ starting wrf task            2  of            6
+ starting wrf task            3  of            6
+ starting wrf task            4  of            6
+ starting wrf task            5  of            6
+
+real	0m0,07s
+user	0m0,04s
+sys	0m0,02s
+ *** Update_bc completed successfully ***
+qcstat_conv_01
+<A HREF="namelist.output">Namelist.output</a>
+<A HREF="rsl/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl">Other RSL output</a>
+<A HREF="cost_fn">Cost function</a>
+<A HREF="grad_fn">Gradient function</a>
+<A HREF="statistics">Statistics</a>
+09/07/16 15:40:36 Ended 0
+</PRE></BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ let CYCLE_NUMBER=CYCLE_NUMBER+1
++ RUN_DIR=/home/camille/DATA/volta/BE/wrf
++ export RUN_DIR
++ WRF_INPUT_DIR=/home/camille/DATA/volta/BE/da
++ export WRF_INPUT_DIR
++ rm -rf /home/camille/DATA/volta/BE/wrf
++ . /home/camille/DATA/volta/BE/namelist_wrf.ksh
++ NL_MAX_DOM=1
++ export NL_MAX_DOM
++ NL_ADAPTATION_DOMAIN=1
++ export NL_ADAPTATION_DOMAIN
++ NL_ADJUST_OUTPUT_TIMES=.true.
++ export NL_ADJUST_OUTPUT_TIMES
++ NL_AUXINPUT4_INTERVAL=360,360,360
++ export NL_AUXINPUT4_INTERVAL
++ NL_BASE_TEMP=290.
++ export NL_BASE_TEMP
++ NL_BLDT=0,0,0
++ export NL_BLDT
++ NL_BL_PBL_PHYSICS=1,1,1
++ export NL_BL_PBL_PHYSICS
++ NL_CUDT=5,5,0
++ export NL_CUDT
++ NL_CU_PHYSICS=3,3,0
++ export NL_CU_PHYSICS
++ NL_CV_OPTIONS=3
++ export NL_CV_OPTIONS
++ NL_DAMPCOEF=0.2
++ export NL_DAMPCOEF
++ NL_DIFF_OPT=1
++ export NL_DIFF_OPT
++ NL_DX=27000,9000,3000
++ export NL_DX
++ NL_DY=27000,9000,3000
++ export NL_DY
++ NL_E_SN=163,217,280
++ export NL_E_SN
++ NL_E_VERT=51,51,51
++ export NL_E_VERT
++ NL_E_WE=163,184,184
++ export NL_E_WE
++ NL_FRAMES_PER_OUTFILE=1,1,1
++ export NL_FRAMES_PER_OUTFILE
++ NL_HISTORY_INTERVAL=360,360,360
++ export NL_HISTORY_INTERVAL
++ NL_INPUTOUT_BEGIN_H=12,12,12
++ export NL_INPUTOUT_BEGIN_H
++ NL_INPUTOUT_END_H=12,12,12
++ export NL_INPUTOUT_END_H
++ NL_INPUTOUT_INTERVAL=360,360,360
++ export NL_INPUTOUT_INTERVAL
++ NL_INPUT_FROM_FILE=.true.,.true.,.true.
++ export NL_INPUT_FROM_FILE
++ NL_IO_FORM_AUXINPUT4=2
++ export NL_IO_FORM_AUXINPUT4
++ NL_IO_FORM_BOUNDARY=2
++ export NL_IO_FORM_BOUNDARY
++ NL_IO_FORM_HISTORY=2
++ export NL_IO_FORM_HISTORY
++ NL_IO_FORM_INPUT=2
++ export NL_IO_FORM_INPUT
++ NL_KM_OPT=4,4,4
++ export NL_KM_OPT
++ NL_MAX_STEP_INCREASE_PCT=5,51,51
++ export NL_MAX_STEP_INCREASE_PCT
++ NL_MAX_TIME_STEP=300,240,180
++ export NL_MAX_TIME_STEP
++ NL_MIN_TIME_STEP=-1,-1,-1
++ export NL_MIN_TIME_STEP
++ NL_MP_PHYSICS=4,4,4
++ export NL_MP_PHYSICS
++ NL_MP_ZERO_OUT=0
++ export NL_MP_ZERO_OUT
++ NL_NUM_METGRID_LEVELS=32
++ export NL_NUM_METGRID_LEVELS
++ NL_NUM_METGRID_SOIL_LEVELS=4
++ export NL_NUM_METGRID_SOIL_LEVELS
++ NL_NUM_SOIL_LAYERS=4
++ export NL_NUM_SOIL_LAYERS
++ NL_OB_FORMAT=1
++ export NL_OB_FORMAT
++ NL_P_TOP_REQUESTED=5000
++ export NL_P_TOP_REQUESTED
++ NL_RADT=3,3,3
++ export NL_RADT
++ NL_RA_LW_PHYSICS=1,1,1
++ export NL_RA_LW_PHYSICS
++ NL_RA_SW_PHYSICS=1,1,1
++ export NL_RA_SW_PHYSICS
++ NL_SF_SFCLAY_PHYSICS=1,1,1
++ export NL_SF_SFCLAY_PHYSICS
++ NL_SF_SURFACE_PHYSICS=2,2,2
++ export NL_SF_SURFACE_PHYSICS
++ NL_SMOOTH_OPTION=0
++ export NL_SMOOTH_OPTION
++ NL_SPECIFIED=.true.
++ export NL_SPECIFIED
++ NL_SST_UPDATE=1
++ export NL_SST_UPDATE
++ NL_STARTING_TIME_STEP=-1,-1,-1
++ export NL_STARTING_TIME_STEP
++ NL_STEP_TO_OUTPUT_TIME=.true.
++ export NL_STEP_TO_OUTPUT_TIME
++ NL_TARGET_CFL=1.2,1.2,1.2
++ export NL_TARGET_CFL
++ NL_TARGET_HCFL=0.84,0.84,0.84
++ export NL_TARGET_HCFL
++ NL_TIME_STEP=120
++ export NL_TIME_STEP
++ NL_USE_ADAPTIVE_TIME_STEP=.true.
++ export NL_USE_ADAPTIVE_TIME_STEP
++ NL_WRITE_INPUT=.true.
++ export NL_WRITE_INPUT
++ NL_W_DAMPING=0
++ export NL_W_DAMPING
++ ./run_wrf.ksh
+.true.
+./run_wrf.ksh[21]: .[294]: let: HALF_E_WE=163,184,184/2: arithmetic syntax error
+./run_wrf.ksh[21]: .[295]: let: HALF_E_SN=163,217,280/2: arithmetic syntax error
+.true.
+<HTML><HEAD><TITLE>BE wrf</TITLE></HEAD><BODY>
+<H1>BE wrf</H1><PRE>
+wo  7 sep 2016 15:40:36 CEST
+REL_DIR        <A HREF="file:/home/camille/Build_WRF">/home/camille/Build_WRF</a>
+WRF_DIR      <A HREF="file:/home/camille/Build_WRF/WRFV3">/home/camille/Build_WRF/WRFV3</a>
+RUN_DIR        <A HREF="file:/home/camille/DATA/volta/BE/wrf">/home/camille/DATA/volta/BE/wrf</a>
+WORK_DIR       <A HREF="file:/home/camille/DATA/volta/BE/wrf/working">/home/camille/DATA/volta/BE/wrf/working</a>
+RC_DIR         <A HREF="file:/home/camille/DATA/volta/BE/rc">/home/camille/DATA/volta/BE/rc</a>
+FC_DIR_DATE    <A HREF="file:/home/camille/DATA/volta/BE/fc/2016063006">/home/camille/DATA/volta/BE/fc/2016063006</a>
+WRF_INPUT_DIR  <A HREF="file:/home/camille/DATA/volta/BE/da">/home/camille/DATA/volta/BE/da</a>
+DATE           2016063006
+END_DATE       2016063018
+FCST_RANGE     12
+LBC_FREQ       6
+DOMAINS        01
+MEM            1
+<A HREF="namelist.input">Namelist input</a>
+ starting wrf task            0  of            6
+ starting wrf task            1  of            6
+ starting wrf task            2  of            6
+ starting wrf task            3  of            6
+ starting wrf task            4  of            6
+ starting wrf task            5  of            6
+<A HREF="namelist.output">Namelist output</a>
+<A HREF="rsl_/rsl.out.0000.html">rsl.out.0000</a>
+<A HREF="rsl_/rsl.error.0000.html">rsl.error.0000</a>
+<A HREF="rsl_>Other RSL output</a>
+09/07/16 15:46:08 Ended 0
+wo  7 sep 2016 15:46:08 CEST
+</BODY></HTML>
++ RC=0
++ [[ 0 != 0 ]]
++ /home/camille/Build_WRF/WRFDA/var/build/da_advance_time.exe 2016063006 12
++ DATE=2016063018
++ export DATE
++ [[ 2016063018 < 2016063018 ]]
++ /home/camille/Build_WRF/WRFDA/var/build/da_advance_time.exe 2016063006 6
++ INITIAL_DATE=2016063012
++ export INITIAL_DATE
++ [[ 2016063012 < 2016063012 ]]
++ date '+%D %T'
++ echo 09/07/16 15:46:08 'End of wrapper_BE.ksh'
+09/07/16 15:46:08 End of wrapper_BE.ksh

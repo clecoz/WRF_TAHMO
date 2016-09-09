@@ -101,7 +101,7 @@ echo "MEM            $MEM"
 # Copy necessary info (better than link as not overwritten):
 ln -fs $EXEC_DIR/main/$EXEC_FILE .
 #ln -fs $EXEC_DIR/run/gribmap.txt .	#????????????
-#ln -fs $EXEC_DIR/run/ozone* .
+ln -fs $EXEC_DIR/run/ozone* .
 ln -fs $EXEC_DIR/run/*.TBL .
 if $DOUBLE; then
    ln -fs $EXEC_DIR/run/RRTM_DATA_DBL RRTM_DATA
@@ -174,10 +174,10 @@ echo '<A HREF="namelist.input">Namelist input</a>'
    echo '<A HREF="namelist.output">Namelist output</a>'
 
    if [[ -f rsl.out.0000 ]]; then
-      rm -rf $RUN_DIR/rsl #_$WRF_CONF
-      mkdir -p $RUN_DIR/rsl #_$WRF_CONF
-      mv rsl* $RUN_DIR/rsl #_$WRF_CONF
-      cd $RUN_DIR/rsl #_$WRF_CONF
+#      rm -rf $RUN_DIR/rsl #_$WRF_CONF
+      mkdir -p $FC_DIR_DATE/rsl #_$WRF_CONF
+      mv rsl* $FC_DIR_DATE/rsl #_$WRF_CONF
+      cd $FC_DIR_DATE/rsl #_$WRF_CONF
       for FILE in rsl*; do
          echo "<HTML><HEAD><TITLE>$FILE</TITLE></HEAD>" > $FILE.html
          echo "<H1>$FILE</H1><PRE>" >> $FILE.html
@@ -197,6 +197,16 @@ if [[ $WRF_CONF == "" ]]; then
    mv $WORK_DIR/wrfinput_* $FC_DIR_DATE
    mv $WORK_DIR/wrfout_*   $FC_DIR_DATE
    mv $WORK_DIR/wrfvar_input_* $FC_DIR_DATE
+   mv $WORK_DIR/namelist.output $FC_DIR_DATE
+fi
+if [[ $USE_TSLIST = 1 ]];then
+   mkdir -p $FC_DIR_DATE/tslist
+   mv $WORK_DIR/*.PH $FC_DIR_DATE/tslist
+   mv $WORK_DIR/*.QV $FC_DIR_DATE/tslist
+   mv $WORK_DIR/*.TH $FC_DIR_DATE/tslist
+   mv $WORK_DIR/*.TS $FC_DIR_DATE/tslist
+   mv $WORK_DIR/*.UU $FC_DIR_DATE/tslist
+   mv $WORK_DIR/*.VV $FC_DIR_DATE/tslist
 fi
 
 if $CLEAN; then

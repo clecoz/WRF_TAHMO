@@ -17,7 +17,7 @@ set echo
 #------------------------------------------------------------------------
 
 export REGION=volta
-export EXPT=problem	# Name of the experiment, used to named the folder where the results will be saved
+export EXPT=BE	# Name of the experiment, used to named the folder where the results will be saved
 
 #Directories:
 export        DAT_DIR=/home/camille/DATA        
@@ -38,11 +38,12 @@ export        SCRIPTS_DIR=/home/camille/WRF_TAHMO	# Directory where are the scri
 #Time info:
 export INITIAL_DATE=2016063000
 export RUN_DURATION=12
-export FINAL_DATE=$($WRFVAR_DIR/var/da/da_advance_time.exe $INITIAL_DATE $RUN_DURATION) # Should not need to be changed
+export END_DATE=2016070112
+export INTERVAL_START=6
 export CYCLING=true
-export CYCLE_PERIOD=6
+export CYCLE_PERIOD=$RUN_DURATION #DA only at the beginning
 export LBC_FREQ=6	# Used to set interval_second in namelist
-export CLEAN=.true.
+#export CLEAN=.true.
 
 #------------------------------------------------------------------------
 
@@ -77,7 +78,7 @@ export NL_NUM_METGRID_LEVELS=32
 export NL_NUM_METGRID_SOIL_LEVELS=4
 export NL_P_TOP_REQUESTED=5000
 export NL_FRAMES_PER_OUTFILE=1,1,1
-export NL_HISTORY_INTERVAL=60,60,60
+export NL_HISTORY_INTERVAL=360,360,360
 export NL_INPUT_FROM_FILE=.true.,.true.,.true.
 export NL_TIME_STEP=120
 #export NL_ETA_LEVEL=
@@ -114,7 +115,7 @@ if [[ $USE_SST = 1 ]]; then	# Parameters used for time-varying SST
 fi
 
 # tslist
-export USE_TSLIST=1
+export USE_TSLIST=0
 if [[ $USE_TSLIST = 1 ]];then
 	export NL_MAX_TS_LOCS=15
 	export NL_MAX_TS_LEVEL=15
@@ -212,7 +213,11 @@ done
 
 #-------------------------------------------------------------------------
 
+#export START_DATE=$INITIAL_DATE
+while [[ ${INITIAL_DATE} < ${END_DATE}  ]]; do
+
 export DATE=$INITIAL_DATE
+export FINAL_DATE=$($WRFVAR_DIR/var/da/da_advance_time.exe $DATE $RUN_DURATION)
 export	FCST_RANGE=$RUN_DURATION
 
 #. ${EXP_DIR}/namelist_wrf.ksh
@@ -277,6 +282,8 @@ while [[ ${DATE} < ${FINAL_DATE} ]]; do
 
 done
 
+   export INITIAL_DATE=`${WRFVAR_DIR}/var/build/da_advance_time.exe $INITIAL_DATE $INTERVAL_START`
+done
 
-echo $(date +'%D %T') "End of cycling"
+echo $(date +'%D %T') "End of wrapper_BE.ksh"
 
